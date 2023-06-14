@@ -1,0 +1,116 @@
+{ config, pkgs, inputs, system, ... }:
+{
+  imports =
+    [
+      ./hardware.nix
+      ./locale.nix
+      ./desktop.nix
+      ./network.nix
+      ./phone.nix
+    ];
+
+  networking.hostName = "mollerbot";
+
+  # Configuring Nix itself
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.use-xdg-base-directories = false; # Some bug makes $PATH not update to the new directories so for now I'm disabling this
+  nix.registry.nixpkgs.flake = inputs.nixpkgs;
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.jack = {
+    isNormalUser = true;
+    description = "Jack W.";
+    extraGroups = [ "networkmanager" "wheel" "libvirtd"];
+    shell = pkgs.nushell;
+    # TODO: Move my profile's packages here, move system packages here too if possible
+    packages = [
+      pkgs.firefox
+      pkgs.me.hi-guys
+    ];
+  };
+  environment.shells = with pkgs; [ nushell ]; # Else PolicyKit breaks
+
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.supportedFilesystems = [ "ntfs" ]; # When I need to access my Windows partition
+
+  # Plymouth, how wasn't this enabled by default?
+  # boot.plymouth.enable = true; # Because it boots faster than fucking light
+  # TODO: Etcetera-branded Plymouth theme
+
+  services.printing.enable = true; # Enable CUPS to print documents.
+
+  # Enable sound with pipewire.
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
+
+    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # no need to redefine it in your config for now)
+    #media-session.enable = true;
+  };
+
+
+  fonts = {
+    fonts = [ pkgs.inter pkgs.iosevka pkgs.me.extra-fonts ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
+    fontDir.enable = true;
+    fontconfig.defaultFonts = {
+      sansSerif = [ "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
+      monospace = [ "Iosevka" "DejaVu Sans Mono" ];
+    };
+  };
+
+  # Custom fonts in Flatpak applications <https://github.com/NixOS/nixpkgs/issues/119433#issuecomment-1326957279>
+  system.fsPackages = [ pkgs.bindfs ];
+  fileSystems =
+    let
+      mkRoSymBind = path: {
+        device = path;
+        fsType = "fuse.bindfs";
+        options = [ "ro" "resolve-symlinks" "x-gvfs-hide" ];
+      };
+      aggregatedFonts = pkgs.buildEnv {
+        name = "system-fonts";
+        paths = config.fonts.fonts;
+        pathsToLink = [ "/share/fonts" ];
+      };
+    in
+    {
+      # Create an FHS mount to support flatpak host icons/fonts
+      "/usr/share/icons" = mkRoSymBind (config.system.path + "/share/icons");
+      "/usr/share/fonts" = mkRoSymBind (aggregatedFonts + "/share/fonts");
+    };
+
+  # https://xeiaso.net/blog/paranoid-nixos-2021-07-18
+  security.sudo.execWheelOnly = true;
+  services.flatpak.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    helix
+    inputs.nix-software-center.packages.${system}.nix-software-center
+    me.vscode # ../packages/vscode/default.nix
+    gitFull # Need full for git-send-mail
+  ];
+  programs.steam.enable = true;
+  environment.sessionVariables = {
+    EDITOR = "${pkgs.helix}/bin/hx"; # Might change this to `code --wait` later
+    NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317 my hatred for X11 grows
+  };
+
+  # This value determines the NixOS release from which the default
+  # settings for stateful data, like file locations and database versions
+  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  system.stateVersion = "22.11"; # Did you read the comment?
+}
