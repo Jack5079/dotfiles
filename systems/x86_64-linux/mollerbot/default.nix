@@ -18,7 +18,7 @@
       use-xdg-base-directories = false; # Some bug makes $PATH not update to the new directories so for now I'm disabling this
       auto-optimise-store = true;
     };
-    registry.nixpkgs.flake = "${inputs.nixpkgs}"; # https://github.com/NixOS/nix/pull/6530, "incompatible changes"
+    registry.nixpkgs.flake = inputs.nixpkgs; # https://github.com/NixOS/nix/pull/6530, "incompatible changes"
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
