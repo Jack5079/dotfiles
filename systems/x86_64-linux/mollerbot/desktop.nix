@@ -2,8 +2,8 @@
   # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # https://github.com/NixOS/nixpkgs/issues/155291#issuecomment-1166199585
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = false;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.desktopManager.plasma5.enable = false;
 
   # Fuck the defaults
   services.xserver.excludePackages = [ pkgs.xterm ];
