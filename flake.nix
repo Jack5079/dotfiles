@@ -4,13 +4,18 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     snowfall-lib = {
-      url = "github:snowfallorg/lib";
+      url = "github:snowfallorg/lib/feat/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-software-center = {
       url = "github:vlinkz/nix-software-center";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    home-manager = {
+      url = "home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme"; flake = false; };
   };
 
   outputs = inputs:

@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-    services.syncthing = {
+  services.syncthing = {
     enable = true;
     user = "jack";
     dataDir = "/home/jack/Documents"; # Default folder for new synced folders
