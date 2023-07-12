@@ -61,7 +61,7 @@
 
 
   fonts = {
-    fonts = [ pkgs.inter pkgs.iosevka pkgs.me.extra-fonts ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
+    fonts = [ pkgs.inter pkgs.iosevka ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       sansSerif = [ "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
