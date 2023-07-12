@@ -13,6 +13,16 @@
   home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
   programs = {
     nushell.enable = true;
+    git = {
+      enable = true;
+      userName = "Jack W.";
+      userEmail = "git@jack.cab";
+      extraConfig = {
+        core.editor = "code --wait";
+        init.defaultBranch = "main";
+        gpg.format = "ssh";
+      };
+    };
     vscode = {
       enable = true;
       package = pkgs.vscode.fhsWithPackages (ps: with ps; [
