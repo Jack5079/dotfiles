@@ -25,13 +25,8 @@
   users.users.jack = {
     isNormalUser = true;
     description = "Jack W.";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd"];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     shell = pkgs.nushell;
-    # TODO: Move my profile's packages here, move system packages here too if possible
-    packages = [
-      pkgs.firefox
-      pkgs.me.hi-guys
-    ];
   };
   environment.shells = with pkgs; [ nushell ]; # Else PolicyKit breaks
 
@@ -66,7 +61,7 @@
 
 
   fonts = {
-    fonts = [ pkgs.inter pkgs.iosevka pkgs.me.extra-fonts ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
+    fonts = [ pkgs.inter pkgs.iosevka ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       sansSerif = [ "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
@@ -100,14 +95,14 @@
   services.flatpak.enable = true;
 
   environment.systemPackages = with pkgs; [
-    helix
+    # helix
     inputs.nix-software-center.packages.${system}.nix-software-center
-    me.vscode # ../packages/vscode/default.nix
+    # me.vscode # ../packages/vscode/default.nix
     gitFull # Need full for git-send-mail
   ];
   programs.steam.enable = true;
   environment.sessionVariables = {
-    EDITOR = "${pkgs.helix}/bin/hx"; # Might change this to `code --wait` later
+    # EDITOR = "${pkgs.helix}/bin/hx"; # Might change this to `code --wait` later
     NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317 my hatred for X11 grows
   };
 
@@ -118,7 +113,7 @@
       ${pkgs.nvd}/bin/nvd --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
     '';
   };
-  
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
