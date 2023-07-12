@@ -10,14 +10,9 @@
     package = pkgs.adw-gtk3;
     name = "Adw-gtk3-dark"; # or Adw-gtk3
   };
-  home.file.".mozilla/firefox/nix-user-profile/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
+  home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
   programs = {
-    nushell = {
-      enable = true;
-      shellAliases = {
-        update = "nix flake update ~/nix; sudo nixos-rebuild switch --flake ~/nix; nix profile upgrade '.*'";
-      };
-    };
+    nushell.enable = true;
     vscode = {
       enable = true;
       package = pkgs.vscode.fhsWithPackages (ps: with ps; [
@@ -45,7 +40,11 @@
     };
     firefox = {
       enable = true;
-      enableGnomeExtensions = true;
+      package = pkgs.firefox.override {
+        cfg = {
+          enableGnomeExtensions = true;
+        };
+      };
       profiles.default = {
         isDefault = true;
         name = "default";
