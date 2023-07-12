@@ -5,6 +5,7 @@
   home.stateVersion = "23.05";
   home.username = "jack";
   home.homeDirectory = "/home/jack";
+  nixpkgs.config.allowUnfree = true;
   gtk.theme = {
     package = pkgs.adw-gtk3;
     name = "Adw-gtk3-dark"; # or Adw-gtk3
