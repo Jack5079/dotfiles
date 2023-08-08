@@ -3,11 +3,11 @@
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1691009117,
-        "narHash": "sha256-pls4Fgk39Dp2QHPpPB/yOHI2FO9AzouGUc4cysA+nKA=",
+        "lastModified": 1691114147,
+        "narHash": "sha256-0IS5na2WRSNWNygHhmZOcXhdrx2aFhCDQY8XVVeHf8Q=",
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
-        "rev": "ef60a6358890c2370af39bc5f2f1fb9898e44a9c",
+        "rev": "08884fb6be1c74a81f5e0a35a81c3f219e109028",
         "type": "github"
       },
       "original": {
@@ -106,11 +106,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1690982105,
-        "narHash": "sha256-32AzoLuwhtxBItcULRiCnxRfJcbVXbPZSH9TDVg21mU=",
+        "lastModified": 1691312444,
+        "narHash": "sha256-J9e9dGwAPTX+UlAn8jehoyaEq6fwK+L+gunfx0cYT4E=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b2ac1d2c32ac11b8d231d23622cdc4b2f28d07d2",
+        "rev": "903e06d734bcae48efb79b9afd51b406d2744179",
         "type": "github"
       },
       "original": {
@@ -141,17 +141,33 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1690881714,
-        "narHash": "sha256-h/nXluEqdiQHs1oSgkOOWF+j8gcJMWhwnZ9PFabN6q0=",
+        "lastModified": 1691368598,
+        "narHash": "sha256-ia7li22keBBbj02tEdqjVeLtc7ZlSBuhUk+7XTUFr14=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9e1960bc196baf6881340d53dccb203a951745a2",
+        "rev": "5a8e9243812ba528000995b294292d3b5e120947",
         "type": "github"
       },
       "original": {
         "id": "nixpkgs",
         "ref": "nixos-unstable",
         "type": "indirect"
+      }
+    },
+    "nixpkgs-with-new-vscode": {
+      "locked": {
+        "lastModified": 1691087982,
+        "narHash": "sha256-S2ll15fJCSMXTEvooa4V9Q/srCLZYt3Ah/+bt7ZgHCs=",
+        "owner": "K900",
+        "repo": "nixpkgs",
+        "rev": "754c7b7c0261225b9581cb7464394e1b52c92410",
+        "type": "github"
+      },
+      "original": {
+        "owner": "K900",
+        "ref": "vscode-1.81.0",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nixpkgs_2": {
@@ -176,6 +192,7 @@
         "home-manager": "home-manager",
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-with-new-vscode": "nixpkgs-with-new-vscode",
         "snowfall-lib": "snowfall-lib",
         "vscode-extensions": "vscode-extensions"
       }
@@ -258,11 +275,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1690939660,
-        "narHash": "sha256-S9lBtuduOuFw+0BW4m94o9CffP0uwgklxClegFkGdjU=",
+        "lastModified": 1691372257,
+        "narHash": "sha256-bKrN2lxg0SetFlLSvLlUeZK0A6zqR49BhUCLSuhGS+s=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "9635bfa6409dc53e2fda524ea1ab721b4fb86f2c",
+        "rev": "36fbeb7785158ae405a0561d443e991438946e5b",
         "type": "github"
       },
       "original": {
