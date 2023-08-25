@@ -16,6 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme"; flake = false; };
+    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = inputs:
