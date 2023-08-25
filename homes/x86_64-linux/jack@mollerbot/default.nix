@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }: {
   imports = [
-    ./snippets.nix # Language snippets for VSCode
+    ./vscode.nix
   ];
   home.stateVersion = "23.05";
   home.username = "jack";
