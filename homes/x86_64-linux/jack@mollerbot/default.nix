@@ -1,15 +1,25 @@
 { inputs, pkgs, ... }: {
   imports = [
     ./vscode.nix
+    # ./skylight
   ];
   home.stateVersion = "23.05";
   home.username = "jack";
   home.homeDirectory = "/home/jack";
   nixpkgs.config.allowUnfree = true;
-  gtk.theme = {
-    package = pkgs.adw-gtk3;
-    name = "Adw-gtk3-dark"; # or Adw-gtk3
-  };
+  # gtk.theme = {
+  #   package = pkgs.adw-gtk3;
+  #   name = "Adw-gtk3-dark"; # or Adw-gtk3
+  # };
+  home.packages = [
+    pkgs.obsidian
+    pkgs.nil # Workaround to get LSP for Nix until https://github.com/microsoft/vscode/issues/147911 so I can just set the path here
+    pkgs.nixpkgs-fmt # Ditto
+    pkgs.songrec
+    pkgs.helvum
+    pkgs.nodePackages_latest.pnpm
+  ];
+
   home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
   programs = {
     nushell.enable = true;
@@ -22,15 +32,6 @@
         init.defaultBranch = "main";
         gpg.format = "ssh";
       };
-    };
-    vscode = {
-      enable = true;
-      package = pkgs.vscode.fhsWithPackages (ps: with ps; [
-        nil # Nix LSP
-        nixpkgs-fmt # Nix formatter
-        nodePackages_latest.pnpm # Too lazy to package all my Node projects
-      ]);
-      # TODO: Manage extensions with nix
     };
     helix = {
       enable = true;

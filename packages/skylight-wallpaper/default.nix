@@ -1,5 +1,7 @@
-{ pkgs, lib }: pkgs.writeTextFile {
+{ pkgs, lib, ... }:
+pkgs.writeTextFile {
   name = "skylight-wallpaper";
+  destination = "/share/gnome-background-properties/skylight.xml";
   text = ''
     <?xml version="1.0"?>
     <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
@@ -15,10 +17,10 @@
       </wallpaper>
     </wallpapers>
   '';
-  destination = "/share/gnome-background-properties/skylight.xml";
+
   meta = {
     description = "Etcetera's brand wallpaper";
-    platforms = lib.platforms.all;
     license = lib.licenses.cc-by-sa-40;
+    platforms = lib.platforms.all;
   };
 }

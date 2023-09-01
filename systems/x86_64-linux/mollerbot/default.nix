@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, system, ... }:
+{ config, pkgs, inputs, system, lib, ... }:
 {
   imports =
     [
@@ -29,7 +29,6 @@
     shell = pkgs.nushell;
   };
   environment.shells = with pkgs; [ nushell ]; # Else PolicyKit breaks
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -61,7 +60,7 @@
 
 
   fonts = {
-    fonts = [ pkgs.inter pkgs.iosevka ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
+    packages = [ pkgs.inter pkgs.iosevka pkgs.noto-fonts-cjk-sans ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       sansSerif = [ "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
@@ -80,7 +79,7 @@
       };
       aggregatedFonts = pkgs.buildEnv {
         name = "system-fonts";
-        paths = config.fonts.fonts;
+        paths = config.fonts.packages;
         pathsToLink = [ "/share/fonts" ];
       };
     in
@@ -94,26 +93,26 @@
   security.sudo.execWheelOnly = true;
   services.flatpak.enable = true;
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     # helix
     inputs.nix-software-center.packages.${system}.nix-software-center
-    # me.vscode # ../packages/vscode/default.nix
-    gitFull # Need full for git-send-mail
+    pkgs.gitFull # Need full for git-send-mail
+    pkgs.me.skylight-wallpaper
   ];
   programs.steam.enable = true;
   environment.sessionVariables = {
-    # EDITOR = "${pkgs.helix}/bin/hx"; # Might change this to `code --wait` later
+    # EDITOR = lib.getExe pkgs.helix; # Might change this to `code --wait` later
     NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317 my hatred for X11 grows
   };
 
-
+  # https://github.com/luishfonseca/dotfiles/blob/main/modules/upgrade-diff.nix
   system.activationScripts.diff = {
     supportsDryActivation = true;
     text = ''
-      ${pkgs.nvd}/bin/nvd --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
+      ${lib.getExe pkgs.nvd} --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
     '';
   };
-
+  services.gpm.enable = true;
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

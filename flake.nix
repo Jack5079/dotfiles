@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     snowfall-lib = {
-      url = "github:snowfallorg/lib/feat/home-manager";
+      url = "github:snowfallorg/lib/dev";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-software-center = {
@@ -23,6 +23,8 @@
     inputs.snowfall-lib.mkFlake {
       inherit inputs;
       channels-config.allowUnfree = true;
+      namespace = "me";
+      package-namespace = "me";
       overlay-package-namespace = "me";
       src = ./.;
     };
