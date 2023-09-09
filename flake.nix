@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-staging.url = "nixpkgs/staging";
     snowfall-lib = {
       url = "github:snowfallorg/lib/dev";
       inputs.nixpkgs.follows = "nixpkgs";

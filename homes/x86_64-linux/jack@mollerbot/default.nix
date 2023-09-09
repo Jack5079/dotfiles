@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, system, ... }: {
   imports = [
     ./vscode.nix
     # ./skylight
@@ -18,6 +18,8 @@
     pkgs.songrec
     pkgs.helvum
     pkgs.nodePackages_latest.pnpm
+    # https://github.com/NixOS/nixpkgs/pull/254046, not yet merged
+    inputs.nixpkgs-staging.legacyPackages.${system}.bun
   ];
 
   home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
@@ -27,7 +29,13 @@
       enable = true;
       userName = "Jack W.";
       userEmail = "git@jack.cab";
+      # https://bun.sh/docs/install/lockfile#how-do-i-git-diff-bun-s-lockfile
+      attributes = [ "*.lockb diff=lockb" ];
       extraConfig = {
+        diff.lockb = {
+          textconv = "bun";
+          binary = true;
+        };
         core.editor = "code --wait";
         init.defaultBranch = "main";
         gpg.format = "ssh";

@@ -154,6 +154,21 @@
         "type": "indirect"
       }
     },
+    "nixpkgs-staging": {
+      "locked": {
+        "lastModified": 1694282496,
+        "narHash": "sha256-ArEqI+aZ5TqzaAL/xxQ1ePrpn36KypQH9V9kvMqojYQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e8eac2883b8806a687c816e4b2c2cba3be5bf2ff",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "staging",
+        "type": "indirect"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1684570954,
@@ -176,6 +191,7 @@
         "home-manager": "home-manager",
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-staging": "nixpkgs-staging",
         "snowfall-lib": "snowfall-lib",
         "vscode-extensions": "vscode-extensions"
       }
