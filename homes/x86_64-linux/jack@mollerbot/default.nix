@@ -18,7 +18,6 @@
     pkgs.songrec
     pkgs.helvum
     pkgs.nodePackages_latest.pnpm
-    pkgs.armcord
   ];
 
   home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
