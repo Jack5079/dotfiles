@@ -18,6 +18,7 @@
     pkgs.songrec
     pkgs.helvum
     pkgs.nodePackages_latest.pnpm
+    inputs.nix-software-center.packages.${system}.nix-software-center
     # https://github.com/NixOS/nixpkgs/pull/254046, not yet merged
     inputs.nixpkgs-staging.legacyPackages.${system}.bun
   ];

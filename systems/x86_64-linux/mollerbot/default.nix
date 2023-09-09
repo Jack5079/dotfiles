@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, system, lib, ... }:
+{ config, pkgs, inputs, lib, ... }:
 {
   imports =
     [
@@ -94,10 +94,7 @@
   services.flatpak.enable = true;
 
   environment.systemPackages = [
-    # helix
-    inputs.nix-software-center.packages.${system}.nix-software-center
-    pkgs.gitFull # Need full for git-send-mail
-    pkgs.me.skylight-wallpaper
+    pkgs.me.skylight-wallpaper # TODO: Get working inside home-manager
   ];
   programs.steam.enable = true;
   environment.sessionVariables = {
