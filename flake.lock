@@ -3,11 +3,11 @@
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1694478853,
-        "narHash": "sha256-R5qtR0r7ztqN0f934ddvCvBMInd15KnTdjp81144H/w=",
+        "lastModified": 1694725325,
+        "narHash": "sha256-kWNuxFWEkK2LtxMi3I+L/55dTrAdtCaXyPalClclD8s=",
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
-        "rev": "434608655dadfa451db1faef6d95a0ec23985a09",
+        "rev": "6514f65331a98d3ea571edb1fa74cb39aaac1459",
         "type": "github"
       },
       "original": {
@@ -106,11 +106,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1694469544,
-        "narHash": "sha256-eqZng5dZnAUyb7xXyFk5z871GY/++KVv3Gyld5mVh20=",
+        "lastModified": 1694643239,
+        "narHash": "sha256-pv2k/5FvyirDE8g4TNehzwZ0T4UOMMmqWSQnM/luRtE=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5171f5ef654425e09d9c2100f856d887da595437",
+        "rev": "d9b88b43524db1591fb3d9410a21428198d75d49",
         "type": "github"
       },
       "original": {
@@ -258,11 +258,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1694481387,
-        "narHash": "sha256-1v5DT/8PmFl9UJHRq6BeMcDTSqXIYjVBilcVFt+vRN0=",
+        "lastModified": 1694654202,
+        "narHash": "sha256-10az0c35rXevEVw+Mw0+0RKj+N1CfofSOAtzvB5U4B0=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "3901c1225944eda6c85f09a57c338f87f06748d2",
+        "rev": "99fe4360baadb636d40f00995a25d3f2fdc50097",
         "type": "github"
       },
       "original": {
