@@ -121,7 +121,6 @@
       bierner.markdown-mermaid
       bodil.blueprint-gtk
       bpruitt-goddard.mermaid-markdown-syntax-highlighting
-      catppuccin.catppuccin-vsc
       codespaces-contrib.codeswing
       davidanson.vscode-markdownlint
       drmerfy.overtype
