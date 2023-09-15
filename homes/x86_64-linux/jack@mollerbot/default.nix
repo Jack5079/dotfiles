@@ -19,23 +19,17 @@
     pkgs.helvum
     pkgs.nodePackages_latest.pnpm
     inputs.nix-software-center.packages.${system}.nix-software-center
-    pkgs.bun
   ];
 
   home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
   programs = {
     nushell.enable = true;
+    bun.enable = true;
     git = {
       enable = true;
       userName = "Jack W.";
       userEmail = "git@jack.cab";
-      # https://bun.sh/docs/install/lockfile#how-do-i-git-diff-bun-s-lockfile
-      attributes = [ "*.lockb diff=lockb" ];
       extraConfig = {
-        diff.lockb = {
-          textconv = "bun";
-          binary = true;
-        };
         core.editor = "code --wait";
         init.defaultBranch = "main";
         gpg.format = "ssh";
