@@ -157,6 +157,7 @@
       mushan.vscode-paste-image
       nico-castell.linux-desktop-file
       nightrains.robloxlsp
+      oven.bun-vscode
       piousdeer.adwaita-theme
       pkief.material-icon-theme
       redhat.vscode-commons
