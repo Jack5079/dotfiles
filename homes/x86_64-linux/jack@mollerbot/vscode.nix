@@ -1,6 +1,8 @@
 { inputs, system, ... }: {
   programs.vscode = {
     enable = true;
+    # https://github.com/nix-community/home-manager/issues/4394#issuecomment-1712909231
+    mutableExtensionsDir = false;
     languageSnippets = rec {
       javascript = {
         "Random from array" = {
