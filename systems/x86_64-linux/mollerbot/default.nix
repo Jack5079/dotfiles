@@ -10,7 +10,9 @@
     ];
 
   networking.hostName = "mollerbot";
-
+  services.udev.packages = [
+    pkgs.android-udev-rules
+  ];
   # Configuring Nix itself
   nix = {
     settings = {
@@ -26,7 +28,7 @@
   users.users.jack = {
     isNormalUser = true;
     description = "Jack W.";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" ];
     shell = pkgs.nushell;
   };
   environment.shells = with pkgs; [ nushell ]; # Else PolicyKit breaks

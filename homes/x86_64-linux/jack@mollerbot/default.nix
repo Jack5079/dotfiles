@@ -19,6 +19,7 @@
     pkgs.helvum
     pkgs.nodePackages_latest.pnpm
     pkgs.arrpc
+    pkgs.android-studio
     inputs.nix-software-center.packages.${system}.nix-software-center
   ];
 
