@@ -18,6 +18,7 @@
     pkgs.songrec
     pkgs.helvum
     pkgs.nodePackages_latest.pnpm
+    pkgs.arrpc
     inputs.nix-software-center.packages.${system}.nix-software-center
   ];
 

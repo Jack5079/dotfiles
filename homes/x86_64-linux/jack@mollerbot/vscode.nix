@@ -134,6 +134,7 @@
       github.github-vscode-theme
       github.remotehub
       hbenl.vscode-test-explorer
+      icrawl.discord-vscode
       jnoortheen.nix-ide
       johnpapa.vscode-peacock
       kde.breeze
