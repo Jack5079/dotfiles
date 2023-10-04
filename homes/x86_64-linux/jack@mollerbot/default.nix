@@ -20,6 +20,11 @@
     pkgs.nodePackages_latest.pnpm
     pkgs.arrpc
     pkgs.android-studio
+    pkgs.tenacity
+    pkgs.whois
+    pkgs.fragments
+    pkgs.virt-manager
+    pkgs.git-absorb
     inputs.nix-software-center.packages.${system}.nix-software-center
   ];
 
