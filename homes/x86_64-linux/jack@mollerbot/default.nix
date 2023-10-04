@@ -28,6 +28,13 @@
     pkgs.obs-studio
     pkgs.piper
     inputs.nix-software-center.packages.${system}.nix-software-center
+    # GSConnect was installed in systems/x84_64-linux/mollerbot/phone.nix when I set programs.kdeconnect.package
+    pkgs.gnomeExtensions.tray-icons-reloaded
+    pkgs.gnomeExtensions.hot-edge
+    pkgs.gnomeExtensions.just-perfection
+    pkgs.gnomeExtensions.paperwm
+    pkgs.gnomeExtensions.overview-background
+    pkgs.gnomeExtensions.wayland-or-x11
   ];
 
   home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;

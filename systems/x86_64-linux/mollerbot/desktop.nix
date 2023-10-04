@@ -21,13 +21,5 @@
       epiphany # Sometimes I uncomment this to test WebKit
       gnome.gnome-music # I use Amberol instead
     ];
-
-    systemPackages = with pkgs.gnomeExtensions; [
-      tray-icons-reloaded
-      hot-edge
-      just-perfection
-      paperwm
-      # GSConnect was installed in ./phone.nix when I set programs.kdeconnect.package
-    ];
   };
 }
