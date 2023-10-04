@@ -131,9 +131,6 @@
       evaera.vscode-rojo
       firefox-devtools.vscode-firefox-debug
       fivethree.vscode-svelte-snippets
-      github.copilot
-      github.copilot-chat
-      github.copilot-labs
       github.github-vscode-theme
       github.remotehub
       hbenl.vscode-test-explorer
