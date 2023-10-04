@@ -7,10 +7,6 @@
   home.username = "jack";
   home.homeDirectory = "/home/jack";
   nixpkgs.config.allowUnfree = true;
-  # gtk.theme = {
-  #   package = pkgs.adw-gtk3;
-  #   name = "Adw-gtk3-dark"; # or Adw-gtk3
-  # };
   home.packages = [
     pkgs.obsidian
     pkgs.nil # Workaround to get LSP for Nix until https://github.com/microsoft/vscode/issues/147911 so I can just set the path here
@@ -25,6 +21,12 @@
     pkgs.fragments
     pkgs.virt-manager
     pkgs.git-absorb
+    pkgs.adw-gtk3
+    pkgs.gnome.gnome-tweaks
+    pkgs.gimp
+    pkgs.element-desktop
+    pkgs.obs-studio
+    pkgs.piper
     inputs.nix-software-center.packages.${system}.nix-software-center
   ];
 
