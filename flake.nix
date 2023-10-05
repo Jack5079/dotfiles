@@ -25,7 +25,6 @@
       channels-config.allowUnfree = true;
       namespace = "me";
       package-namespace = "me";
-      overlay-package-namespace = "me";
       src = ./.;
     };
 }
