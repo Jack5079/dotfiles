@@ -7,8 +7,12 @@
       ./desktop.nix
       ./network.nix
       ./phone.nix
+      "${inputs.nixpkgs}/nixos/modules/profiles/hardened.nix"
     ];
 
+  security.unprivilegedUsernsClone = true; # Needed for flatpak
+  security.virtualisation.flushL1DataCache = null; # Use kernel default. Hardened uses always: "flushes L1 data cache every time the hypervisor enters the guest.  May incur significant performance cost."
+  security.allowSimultaneousMultithreading = true; # "Disabling SMT means that only physical CPU cores will be usable at runtime, potentially at significant performance cost."
   networking.hostName = "mollerbot";
   services.udev.packages = [
     pkgs.android-udev-rules
