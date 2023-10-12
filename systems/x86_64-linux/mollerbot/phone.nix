@@ -8,6 +8,6 @@
   programs.firefox.nativeMessagingHosts.gsconnect = config.services.xserver.desktopManager.gnome.enable;
   programs.kdeconnect = {
     enable = true;
-    package = lib.mkIf (config.services.xserver.desktopManager.gnome.enable) pkgs.gnomeExtensions.gsconnect;
+    package = lib.mkIf config.services.xserver.desktopManager.gnome.enable pkgs.gnomeExtensions.gsconnect;
   };
 }
