@@ -67,7 +67,7 @@
 
 
   fonts = {
-    packages = [ pkgs.inter pkgs.iosevka pkgs.noto-fonts-cjk-sans ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
+    packages = [ pkgs.inter pkgs.iosevka pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       sansSerif = [ "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
