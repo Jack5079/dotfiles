@@ -17,10 +17,29 @@
   services.udev.packages = [
     pkgs.android-udev-rules
   ];
-  # Configuring Nix itself
+
   nix = {
+    # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      # How to update this array later: Go to https://nixos.org/manual/nix/stable/contributing/experimental-features#currently-available-experimental-features
+      # and run `copy(JSON.stringify($$("#currently-available-experimental-features ~ h2").map(h2 => h2.textContent), null, 2).replaceAll(",", ""))`
+      experimental-features = [
+        "auto-allocate-uids"
+        "ca-derivations"
+        "cgroups"
+        "daemon-trust-override"
+        "discard-references"
+        "dynamic-derivations"
+        "fetch-closure"
+        "flakes"
+        "impure-derivations"
+        "nix-command"
+        "no-url-literals"
+        "parse-toml-timestamps"
+        "read-only-local-store"
+        "recursive-nix"
+        "repl-flake"
+      ];
       use-xdg-base-directories = false; # Some bug makes $PATH not update to the new directories so for now I'm disabling this
       auto-optimise-store = true;
       log-lines = 10000000;
