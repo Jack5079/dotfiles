@@ -4,9 +4,6 @@
     # ./skylight
   ];
   home.stateVersion = "23.05";
-  home.username = "jack";
-  home.homeDirectory = "/home/jack";
-  nixpkgs.config.allowUnfree = true;
   home.packages = [
     pkgs.obsidian
     pkgs.nil # Workaround to get LSP for Nix until https://github.com/microsoft/vscode/issues/147911 so I can just set the path here
