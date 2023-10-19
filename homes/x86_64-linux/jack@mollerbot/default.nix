@@ -1,7 +1,6 @@
 { inputs, pkgs, system, ... }: {
   imports = [
     ./vscode.nix
-    # ./skylight
   ];
   home.stateVersion = "23.05";
   home.packages = [
@@ -25,6 +24,7 @@
     pkgs.obs-studio
     pkgs.piper
     inputs.nix-software-center.packages.${system}.nix-software-center
+    pkgs.me.skylight-wallpaper
     # GSConnect was installed in systems/x84_64-linux/mollerbot/phone.nix when I set programs.kdeconnect.package
     pkgs.gnomeExtensions.tray-icons-reloaded
     pkgs.gnomeExtensions.hot-edge

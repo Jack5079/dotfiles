@@ -120,10 +120,6 @@
     };
 
   services.flatpak.enable = true;
-
-  environment.systemPackages = [
-    pkgs.me.skylight-wallpaper # TODO: Get working inside home-manager
-  ];
   programs.steam.enable = true;
   environment.sessionVariables = {
     # EDITOR = lib.getExe pkgs.helix; # Might change this to `code --wait` later
