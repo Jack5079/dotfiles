@@ -1,8 +1,9 @@
-{ config, lib, modulesPath, pkgs, ... }:
+{ config, lib, modulesPath, ... }:
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
   # boot.kernelPackages = pkgs.linuxPackages_latest; # "the hardened patches frequently lag behind the upstream kernel." https://github.com/NixOS/nixpkgs/blob/f7edf57b886d3f0f52a224f993bce1d0cb740232/pkgs/top-level/aliases.nix#L497
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
@@ -12,12 +13,14 @@
   boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ]; # https://github.com/atar-axis/xpadneo/
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/89b2dc1f-e231-4bcb-b67a-25f49a32ada6";
+    {
+      device = "/dev/disk/by-uuid/89b2dc1f-e231-4bcb-b67a-25f49a32ada6";
       fsType = "ext4";
     };
 
   fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/7C1F-0E6C";
+    {
+      device = "/dev/disk/by-uuid/7C1F-0E6C";
       fsType = "vfat";
     };
 
@@ -34,6 +37,7 @@
   # NVIDIA
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
   #  hardware.nvidia.powerManagement.enable = true; # Enabling this made my PC randomly sleep
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
