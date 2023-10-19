@@ -7,12 +7,9 @@
       ./desktop.nix
       ./network.nix
       ./phone.nix
-      "${inputs.nixpkgs}/nixos/modules/profiles/hardened.nix"
     ];
 
-  security.unprivilegedUsernsClone = true; # Needed for flatpak
-  security.virtualisation.flushL1DataCache = null; # Use kernel default. Hardened uses always: "flushes L1 data cache every time the hypervisor enters the guest.  May incur significant performance cost."
-  security.allowSimultaneousMultithreading = true; # "Disabling SMT means that only physical CPU cores will be usable at runtime, potentially at significant performance cost."
+  security.hardened.enable = true;
   networking.hostName = "mollerbot";
   services.udev.packages = [
     pkgs.android-udev-rules
@@ -121,8 +118,6 @@
       "/usr/share/fonts" = mkRoSymBind (aggregatedFonts + "/share/fonts");
     };
 
-  # https://xeiaso.net/blog/paranoid-nixos-2021-07-18
-  security.sudo.execWheelOnly = true;
   services.flatpak.enable = true;
 
   environment.systemPackages = [
