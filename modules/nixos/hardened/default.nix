@@ -1,21 +1,26 @@
 { config, modulesPath, lib, pkgs, ... }:
 
 let
-  cfg = config.security.hardened;
+  cfg = config.security;
 in
 {
-  options.security.hardened = {
-    enable = lib.mkEnableOption "hardening";
-  };
+  options.security.hardened = lib.mkEnableOption "hardening";
 
-  config = lib.mkIf cfg.enable ((import "${modulesPath}/profiles/hardened.nix" { inherit config lib pkgs; }) // {
-    # Needed for flatpak
-    security.unprivilegedUsernsClone = lib.mkForce true;
-    security.allowUserNamespaces = lib.mkForce true;
-    security.virtualisation.flushL1DataCache = null; # Use kernel default. Hardened uses always: "flushes L1 data cache every time the hypervisor enters the guest.  May incur significant performance cost."
-    security.allowSimultaneousMultithreading = true; # "Disabling SMT means that only physical CPU cores will be usable at runtime, potentially at significant performance cost."
-    # https://xeiaso.net/blog/paranoid-nixos-2021-07-18
-    security.sudo.execWheelOnly = true;
-    environment.defaultPackages = lib.mkForce [ ]; # Currently only perl, rsync, and strace
-  });
+  config = lib.mkIf cfg.hardened (
+    (import "${modulesPath}/profiles/hardened.nix" { inherit config lib pkgs; })
+    // {
+      # Needed for flatpak
+      security.unprivilegedUsernsClone = lib.mkForce true;
+      security.allowUserNamespaces = lib.mkForce true;
+      security.virtualisation.flushL1DataCache = null; # Use kernel default. Hardened uses always: "flushes L1 data cache every time the hypervisor enters the guest.  May incur significant performance cost."
+      security.allowSimultaneousMultithreading = true; # "Disabling SMT means that only physical CPU cores will be usable at runtime, potentially at significant performance cost."
+      # https://xeiaso.net/blog/paranoid-nixos-2021-07-18
+      security.sudo.execWheelOnly = true;
+      environment.defaultPackages = lib.mkForce [ ]; # Currently only perl, rsync, and strace
+    }
+    // lib.mkIf config.programs.virt-manager.enable {
+      # https://github.com/NixOS/nixpkgs/issues/223594#issuecomment-1527956398
+      boot.kernelModules = [ "kvm-amd" "evdev" "nf" "nf_nat" "nft_chain_nat" "nf_ct" "xt_conntrack" "nf_conntrack" "xt_CHECKSUM" "xt_MASQUERADE" "ipt_REJECT" "nf_reject_ipv4" "snd_hnd_core" "snd" "udp_diag" "edac_mce_amd" "edac_core" "syscopyarea" "ip6_tables" "vhost" "vhost_net" "vhost_iotlb" "xhci_pci" ];
+    }
+  );
 }
