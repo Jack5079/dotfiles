@@ -3,7 +3,7 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant. I wonder why this is already on even though it's commented out
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 3000 5173 ];
+  networking.firewall.allowedTCPPorts = [ 3000 5173 4321 ]; # Generic dev servers, Vite, and Astro
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
