@@ -33,7 +33,6 @@
         "ca-derivations"
         "cgroups"
         "daemon-trust-override"
-        "discard-references"
         "dynamic-derivations"
         "fetch-closure"
         "flakes"
