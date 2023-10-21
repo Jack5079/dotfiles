@@ -8,7 +8,14 @@
       ./network.nix
       ./phone.nix
     ];
-
+  virtualisation.vmVariant =
+    {
+      # following configuration is added only when building VM with build-vm
+      virtualisation = {
+        memorySize = 8192; # Use 2048MiB memory.
+        cores = 12;
+      };
+    };
   security.hardened.enable = true;
   networking.hostName = "mollerbot";
   services.udev.packages = [
@@ -56,6 +63,7 @@
     isNormalUser = true;
     description = "Jack W.";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" ];
+    initialHashedPassword = "$y$j9T$08sb4D2lguIDpdoEKxY450$EpQpDMvff04dmk8FqPYMQIu2pqymSGjqDDkqslKtK9D";
     shell = pkgs.nushell;
   };
   environment.shells = with pkgs; [ nushell ]; # Else PolicyKit breaks
