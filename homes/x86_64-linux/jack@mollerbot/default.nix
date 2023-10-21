@@ -1,6 +1,7 @@
 { inputs, pkgs, system, ... }: {
   imports = [
     ./vscode.nix
+    ./dconf.nix
   ];
   home.stateVersion = "23.05";
   home.packages = [
