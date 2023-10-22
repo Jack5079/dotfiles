@@ -19,7 +19,15 @@
     pkgs.me.skylight-wallpaper
   ];
   programs = {
-    nushell.enable = true;
+    nushell = {
+      enable = true;
+      shellAliases = {
+        switch = "sudo nixos-rebuild switch --fast --print-build-logs";
+        nx = "nix develop --command hx";
+        nv = "nix develop --command code";
+      };
+      extraConfig = "$env.config.show_banner = false;";
+    };
     bun.enable = true;
     vscode.enable = true;
     firefox.enable = true;
