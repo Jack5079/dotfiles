@@ -41,6 +41,7 @@ extensions: with extensions; [
   mushan.vscode-paste-image
   nico-castell.linux-desktop-file
   nightrains.robloxlsp
+  orta.vscode-twoslash-queries
   oven.bun-vscode
   piousdeer.adwaita-theme
   pkief.material-icon-theme
