@@ -136,7 +136,93 @@
         grandchild-size-hover = 27.0;
         hover-mode = true;
         label-font = "Open Sans 8";
-        menu-configuration = "[{\"name\":\"Sween\",\"icon\":\"\",\"shortcut\":\"Launch7\",\"centered\":false,\"id\":0,\"children\":[{\"name\":\"Sound\",\"icon\":\"org.gnome.Settings-sound-symbolic\",\"children\":[{\"name\":\"Mute\",\"icon\":\"flypie-multimedia-mute-symbolic-#853\",\"type\":\"Shortcut\",\"data\":\"AudioMute\",\"angle\":-1},{\"name\":\"Play / Pause\",\"icon\":\"flypie-multimedia-playpause-symbolic-#853\",\"type\":\"Shortcut\",\"data\":\"AudioPlay\",\"angle\":-1},{\"name\":\"Next Title\",\"icon\":\"flypie-multimedia-next-symbolic-#853\",\"type\":\"Shortcut\",\"data\":\"AudioNext\",\"angle\":90},{\"name\":\"Previous Title\",\"icon\":\"flypie-multimedia-previous-symbolic-#853\",\"type\":\"Shortcut\",\"data\":\"AudioPrev\",\"angle\":270}],\"type\":\"CustomMenu\",\"data\":{},\"angle\":-1,\"showLabels\":false},{\"name\":\"Design\",\"icon\":\"document-edit-symbolic\",\"type\":\"CustomMenu\",\"children\":[{\"name\":\"Emblem\",\"icon\":\"org.gnome.design.Emblem\",\"type\":\"Command\",\"data\":{\"command\":\"flatpak run --branch=stable --arch=x86_64 --command=emblem org.gnome.design.Emblem\"},\"angle\":-1},{\"name\":\"Inkscape Vector Graphics Editor\",\"icon\":\"org.inkscape.Inkscape\",\"type\":\"Command\",\"data\":{\"command\":\"inkscape %F\"},\"angle\":-1},{\"name\":\"GNU Image Manipulation Program\",\"icon\":\"gimp\",\"type\":\"Command\",\"data\":{\"command\":\"gimp-2.10 %U\"},\"angle\":-1},{\"name\":\"Icon Library\",\"icon\":\"org.gnome.design.IconLibrary\",\"type\":\"Command\",\"data\":{\"command\":\"flatpak run --branch=stable --arch=x86_64 --command=icon-library org.gnome.design.IconLibrary\"},\"angle\":-1},{\"name\":\"Blender\",\"icon\":\"org.blender.Blender\",\"type\":\"Command\",\"data\":{\"command\":\"flatpak run --branch=stable --arch=x86_64 --command=blender --file-forwarding org.blender.Blender @@ %f @@\"},\"angle\":-1}],\"angle\":-1,\"data\":{},\"showLabels\":false},{\"name\":\"Video\",\"icon\":\"video-x-generic-symbolic\",\"type\":\"CustomMenu\",\"children\":[{\"name\":\"Kdenlive\",\"icon\":\"org.kde.kdenlive\",\"type\":\"Command\",\"data\":{\"command\":\"flatpak run --branch=stable --arch=x86_64 --command=kdenlive --file-forwarding org.kde.kdenlive @@ %F @@\"},\"angle\":-1},{\"name\":\"Video Downloader\",\"icon\":\"com.github.unrud.VideoDownloader\",\"type\":\"Command\",\"data\":{\"command\":\"flatpak run --branch=stable --arch=x86_64 --command=video-downloader com.github.unrud.VideoDownloader\"},\"angle\":-1},{\"name\":\"OBS Studio\",\"icon\":\"com.obsproject.Studio\",\"type\":\"Command\",\"data\":{\"command\":\"obs\"},\"angle\":-1}],\"angle\":-1,\"data\":{},\"showLabels\":false,\"showChildLabels\":false},{\"name\":\"Code\",\"icon\":\"applications-science-symbolic\",\"type\":\"CustomMenu\",\"children\":[{\"name\":\"Workbench\",\"icon\":\"re.sonny.Workbench\",\"type\":\"Command\",\"data\":{\"command\":\"flatpak run --branch=stable --arch=x86_64 --command=workbench --file-forwarding re.sonny.Workbench @@u %U @@\"},\"angle\":-1},{\"name\":\"Console\",\"icon\":\"org.gnome.Console\",\"type\":\"Command\",\"data\":{\"command\":\"kgx\"},\"angle\":-1},{\"name\":\"Helix\",\"icon\":\"helix\",\"type\":\"Command\",\"data\":{\"command\":\"kgx hx %F\"},\"angle\":-1},{\"name\":\"Visual Studio Code\",\"icon\":\"code\",\"type\":\"Command\",\"data\":{\"command\":\"code %F\"},\"angle\":-1}],\"angle\":-1,\"data\":{},\"showLabels\":false},{\"name\":\"Web\",\"icon\":\"web-browser-symbolic\",\"type\":\"CustomMenu\",\"children\":[{\"name\":\"Discord\",\"icon\":\"💬️\",\"type\":\"Uri\",\"data\":{\"uri\":\"https://discord.com/app\"},\"angle\":-1},{\"name\":\"Misskey\",\"icon\":\"😺️\",\"type\":\"Uri\",\"data\":{\"uri\":\"https://owo.community\"},\"angle\":-1},{\"name\":\"Mastodon\",\"icon\":\"🐘️\",\"type\":\"Uri\",\"data\":{\"uri\":\"https://wetdry.world\"},\"angle\":-1},{\"name\":\"YT Music\",\"icon\":\"💿️\",\"type\":\"Uri\",\"data\":{\"uri\":\"https://music.youtube.com\"},\"angle\":-1},{\"name\":\"movie-web\",\"icon\":\"📽️\",\"type\":\"Uri\",\"data\":{\"uri\":\"https://movie-web.app\"},\"angle\":-1}],\"angle\":-1,\"data\":{},\"showLabels\":false}],\"type\":\"CustomMenu\",\"data\":{},\"touchButton\":false,\"superRMB\":false,\"showLabels\":false,\"showChildLabels\":false}]";
+        menu-configuration = builtins.toJSON [{
+          centered = false;
+          children = [
+            {
+              angle = -1;
+              children = [
+                { angle = -1; data = "AudioMute"; icon = "flypie-multimedia-mute-symbolic-#853"; name = "Mute"; type = "Shortcut"; }
+                { angle = -1; data = "AudioPlay"; icon = "flypie-multimedia-playpause-symbolic-#853"; name = "Play / Pause"; type = "Shortcut"; }
+                { angle = 90; data = "AudioNext"; icon = "flypie-multimedia-next-symbolic-#853"; name = "Next Title"; type = "Shortcut"; }
+                { angle = 270; data = "AudioPrev"; icon = "flypie-multimedia-previous-symbolic-#853"; name = "Previous Title"; type = "Shortcut"; }
+              ];
+              data = { };
+              icon = "org.gnome.Settings-sound-symbolic";
+              name = "Sound";
+              showLabels = false;
+              type = "CustomMenu";
+            }
+            {
+              angle = -1;
+              children = [
+                { angle = -1; data = { command = "flatpak run --branch=stable --arch=x86_64 --command=emblem org.gnome.design.Emblem"; }; icon = "org.gnome.design.Emblem"; name = "Emblem"; type = "Command"; }
+                { angle = -1; data = { command = "inkscape %F"; }; icon = "org.inkscape.Inkscape"; name = "Inkscape Vector Graphics Editor"; type = "Command"; }
+                { angle = -1; data = { command = "gimp-2.10 %U"; }; icon = "gimp"; name = "GNU Image Manipulation Program"; type = "Command"; }
+                { angle = -1; data = { command = "flatpak run --branch=stable --arch=x86_64 --command=icon-library org.gnome.design.IconLibrary"; }; icon = "org.gnome.design.IconLibrary"; name = "Icon Library"; type = "Command"; }
+                { angle = -1; data = { command = "flatpak run --branch=stable --arch=x86_64 --command=blender --file-forwarding org.blender.Blender @@ %f @@"; }; icon = "org.blender.Blender"; name = "Blender"; type = "Command"; }
+              ];
+              data = { };
+              icon = "document-edit-symbolic";
+              name = "Design";
+              showLabels = false;
+              type = "CustomMenu";
+            }
+            {
+              angle = -1;
+              children = [
+                { angle = -1; data = { command = "flatpak run --branch=stable --arch=x86_64 --command=kdenlive --file-forwarding org.kde.kdenlive @@ %F @@"; }; icon = "org.kde.kdenlive"; name = "Kdenlive"; type = "Command"; }
+                { angle = -1; data = { command = "flatpak run --branch=stable --arch=x86_64 --command=video-downloader com.github.unrud.VideoDownloader"; }; icon = "com.github.unrud.VideoDownloader"; name = "Video Downloader"; type = "Command"; }
+                { angle = -1; data = { command = "obs"; }; icon = "com.obsproject.Studio"; name = "OBS Studio"; type = "Command"; }
+              ];
+              data = { };
+              icon = "video-x-generic-symbolic";
+              name = "Video";
+              showChildLabels = false;
+              showLabels = false;
+              type = "CustomMenu";
+            }
+            {
+              angle = -1;
+              children = [
+                { angle = -1; data = { command = "flatpak run --branch=stable --arch=x86_64 --command=workbench --file-forwarding re.sonny.Workbench @@u %U @@"; }; icon = "re.sonny.Workbench"; name = "Workbench"; type = "Command"; }
+                { angle = -1; data = { command = "kgx"; }; icon = "org.gnome.Console"; name = "Console"; type = "Command"; }
+                { angle = -1; data = { command = "kgx hx %F"; }; icon = "helix"; name = "Helix"; type = "Command"; }
+                { angle = -1; data = { command = "code %F"; }; icon = "code"; name = "Visual Studio Code"; type = "Command"; }
+              ];
+              data = { };
+              icon = "applications-science-symbolic";
+              name = "Code";
+              showLabels = false;
+              type = "CustomMenu";
+            }
+            {
+              angle = -1;
+              children = [
+                { angle = -1; data = { uri = "https://discord.com/app"; }; icon = "💬️"; name = "Discord"; type = "Uri"; }
+                { angle = -1; data = { uri = "https://owo.community"; }; icon = "😺️"; name = "Misskey"; type = "Uri"; }
+                { angle = -1; data = { uri = "https://wetdry.world"; }; icon = "🐘️"; name = "Mastodon"; type = "Uri"; }
+                { angle = -1; data = { uri = "https://music.youtube.com"; }; icon = "💿️"; name = "YT Music"; type = "Uri"; }
+                { angle = -1; data = { uri = "https://movie-web.app"; }; icon = "📽️"; name = "movie-web"; type = "Uri"; }
+              ];
+              data = { };
+              icon = "web-browser-symbolic";
+              name = "Web";
+              showLabels = false;
+              type = "CustomMenu";
+            }
+          ];
+          data = { };
+          icon = "";
+          id = 0;
+          name = "Sween";
+          shortcut = "Launch7";
+          showChildLabels = false;
+          showLabels = false;
+          superRMB = false;
+          touchButton = false;
+          type = "CustomMenu";
+        }];
         text-color = "rgb(222,222,222)";
         trace-color = "rgba(0,0,0,0.462838)";
         trace-min-length = 200.0;
