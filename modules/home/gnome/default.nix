@@ -136,6 +136,7 @@
         grandchild-size-hover = 27.0;
         hover-mode = true;
         label-font = "Open Sans 8";
+        achievement-notifications = false;
         menu-configuration = builtins.toJSON [{
           centered = false;
           children = [
