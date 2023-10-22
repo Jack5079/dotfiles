@@ -47,7 +47,7 @@
       enable = true;
       defaultEditor = true;
       settings = {
-        theme = "adwaita-dark";
+        theme = "github_dark";
         editor = {
           bufferline = "multiple";
           auto-save = true;
