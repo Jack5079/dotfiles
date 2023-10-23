@@ -109,11 +109,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1697964592,
-        "narHash": "sha256-fua0LKNLkYYK2Dgdm9P+VPdqrVgDXUIx+EkQAQByhuc=",
+        "lastModified": 1698069042,
+        "narHash": "sha256-L6U8qNhQ3KjQ04voQ+QLQCnFbD5NuIlqC9DO9T7jIZY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "219d268a69512ff520fe8da1739ac22d95d52355",
+        "rev": "f540f30f1f3c76b68922550dcf5f78f42732fd37",
         "type": "github"
       },
       "original": {
@@ -159,6 +159,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1697723726,
+        "narHash": "sha256-SaTWPkI8a5xSHX/rrKzUe+/uVNy6zCGMXgoeMb7T9rg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "7c9cc5a6e5d38010801741ac830a3f8fd667a7a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1684570954,
         "narHash": "sha256-FX5y4Sm87RWwfu9PI71XFvuRpZLowh00FQpIJ1WfXqE=",
         "owner": "NixOS",
@@ -173,12 +189,31 @@
         "type": "github"
       }
     },
+    "pipewire-screenaudio": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1698023501,
+        "narHash": "sha256-lRFObogRnpw6xyX8F5FDuux4G/U4ncbsVO0Um01ZAwQ=",
+        "owner": "IceDBorn",
+        "repo": "pipewire-screenaudio",
+        "rev": "963f6684d55c09ac62e9faaf1231ac7d48cc5d68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "IceDBorn",
+        "repo": "pipewire-screenaudio",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "firefox-gnome-theme": "firefox-gnome-theme",
         "home-manager": "home-manager",
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
+        "pipewire-screenaudio": "pipewire-screenaudio",
         "snowfall-lib": "snowfall-lib",
         "vscode-extensions": "vscode-extensions"
       }
@@ -272,14 +307,14 @@
       "inputs": {
         "flake-compat": "flake-compat_2",
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1697937890,
-        "narHash": "sha256-yYS8vBhj5R44ZiRv1nLyu0yyLpGIiwDxeKfrwyuH6Ao=",
+        "lastModified": 1698023958,
+        "narHash": "sha256-gCkt3juUmCKIsyhV6Vscot6zRO4Hbpplnvwo9A1GJDo=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "5ed21750e38ea85f1765068f73e71b134a4cc7bf",
+        "rev": "7af14d989be05c7e6636894a61316343495ad9bb",
         "type": "github"
       },
       "original": {
