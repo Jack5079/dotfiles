@@ -3,11 +3,11 @@
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1698252763,
-        "narHash": "sha256-sU9CzvGOequiA2TI9LzUNaD4XjqLCb9C3/TYM7+GfYQ=",
+        "lastModified": 1698329218,
+        "narHash": "sha256-OU6LyGeePS31pG7o10su7twDzDL5Z3a1sHtV68SzEwI=",
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
-        "rev": "f4cbaff88d247e8fed3483b715fd11eec0f86c50",
+        "rev": "3cb70833903a560ac22f49d278e7ce955bf8395e",
         "type": "github"
       },
       "original": {
@@ -109,11 +109,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1698250431,
-        "narHash": "sha256-qs2gTeH4wpnWPO6Oi6sOhp2IhG0i0DzcnrJxIY3/CP8=",
+        "lastModified": 1698392685,
+        "narHash": "sha256-yx/sbRneR2AfSAeAMqUu0hoVJdjh+qhl/7dkirp8yo8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "09587fbbc6a669f7725613e044c2577dc5d43ab5",
+        "rev": "1369d2cefb6f128c30e42fabcdebbacc07e18b3f",
         "type": "github"
       },
       "original": {
@@ -144,11 +144,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1698134075,
-        "narHash": "sha256-foCD+nuKzfh49bIoiCBur4+Fx1nozo+4C/6k8BYk4sg=",
+        "lastModified": 1698318101,
+        "narHash": "sha256-gUihHt3yPD7bVqg+k/UVHgngyaJ3DMEBchbymBMvK1E=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8efd5d1e283604f75a808a20e6cde0ef313d07d4",
+        "rev": "63678e9f3d3afecfeafa0acead6239cdb447574c",
         "type": "github"
       },
       "original": {
@@ -159,11 +159,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1698134075,
-        "narHash": "sha256-foCD+nuKzfh49bIoiCBur4+Fx1nozo+4C/6k8BYk4sg=",
+        "lastModified": 1698318101,
+        "narHash": "sha256-gUihHt3yPD7bVqg+k/UVHgngyaJ3DMEBchbymBMvK1E=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8efd5d1e283604f75a808a20e6cde0ef313d07d4",
+        "rev": "63678e9f3d3afecfeafa0acead6239cdb447574c",
         "type": "github"
       },
       "original": {
@@ -194,11 +194,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1698103362,
-        "narHash": "sha256-OsBwBmXm0vXuU5lqta4UchSGYkjlMzJdpUS2JMQ2Knc=",
+        "lastModified": 1698352200,
+        "narHash": "sha256-HGifhnM1GapC3dXqG3yfikHol30W8H44JK/lRiJYnCs=",
         "owner": "IceDBorn",
         "repo": "pipewire-screenaudio",
-        "rev": "8d84a6ec28cf0fbc4b58befa53453c0b6cee41a9",
+        "rev": "d688737fe902e85b557b542657636f37012b3d5c",
         "type": "github"
       },
       "original": {
@@ -310,11 +310,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1698196718,
-        "narHash": "sha256-/vKDW1HaKpoME4g7jTAFyap1fHEi7IM4OdmU6fVpB+0=",
+        "lastModified": 1698369553,
+        "narHash": "sha256-UydAsFdCNXvC0nkkMWsAb1nfAp4MoPdLVfQ9AY8hAis=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "b4f9b971850b1265ea9f450070eb3badd88ae360",
+        "rev": "d6e6e8417d54edca269d4351c6dc1fd4e4b163c1",
         "type": "github"
       },
       "original": {
