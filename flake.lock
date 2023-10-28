@@ -109,11 +109,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1698392685,
-        "narHash": "sha256-yx/sbRneR2AfSAeAMqUu0hoVJdjh+qhl/7dkirp8yo8=",
+        "lastModified": 1698479159,
+        "narHash": "sha256-rJHBDwW4LbADEfhkgGHjKGfL2dF44NrlyXdXeZrQahs=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "1369d2cefb6f128c30e42fabcdebbacc07e18b3f",
+        "rev": "f92a54fef4eacdbe86b0a2054054dd58b0e2a2a4",
         "type": "github"
       },
       "original": {
@@ -155,6 +155,22 @@
         "id": "nixpkgs",
         "ref": "nixos-unstable",
         "type": "indirect"
+      }
+    },
+    "nixpkgs-with-vinegar": {
+      "locked": {
+        "lastModified": 1698125251,
+        "narHash": "sha256-EpOwh7wMWSqU+4zUGTrQyXNnJlPgIAFFGvNAmZNxdFw=",
+        "owner": "mfrw",
+        "repo": "nixpkgs",
+        "rev": "5ec7f8e04bf5a7bf3ca781f1b2a8afa5b7cf4bc6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mfrw",
+        "ref": "mfrw/vinegar",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nixpkgs_2": {
@@ -213,6 +229,7 @@
         "home-manager": "home-manager",
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-with-vinegar": "nixpkgs-with-vinegar",
         "pipewire-screenaudio": "pipewire-screenaudio",
         "snowfall-lib": "snowfall-lib",
         "vscode-extensions": "vscode-extensions"
@@ -310,11 +327,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1698369553,
-        "narHash": "sha256-UydAsFdCNXvC0nkkMWsAb1nfAp4MoPdLVfQ9AY8hAis=",
+        "lastModified": 1698455861,
+        "narHash": "sha256-qCG2FqdCpJFTdwRzH4CfYUIwyXdLXH+mbkWTJv4wz5k=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "d6e6e8417d54edca269d4351c6dc1fd4e4b163c1",
+        "rev": "ccb2cfa4b140dd2a535c01488c42387d51b8c928",
         "type": "github"
       },
       "original": {
