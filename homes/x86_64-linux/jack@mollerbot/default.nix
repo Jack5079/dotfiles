@@ -15,6 +15,7 @@
     pkgs.element-desktop
     pkgs.obs-studio
     pkgs.piper
+    pkgs.beeper
     inputs.nix-software-center.packages.${system}.nix-software-center
     pkgs.me.skylight-wallpaper
   ];
