@@ -71,6 +71,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.supportedFilesystems = [ "ntfs" ]; # When I need to access my Windows partition
+  boot.initrd.systemd.enable = true;
 
   # Plymouth, how wasn't this enabled by default?
   # boot.plymouth.enable = true; # Because it boots faster than fucking light
