@@ -73,10 +73,6 @@
   boot.supportedFilesystems = [ "ntfs" ]; # When I need to access my Windows partition
   boot.initrd.systemd.enable = true;
 
-  # Plymouth, how wasn't this enabled by default?
-  # boot.plymouth.enable = true; # Because it boots faster than fucking light
-  # TODO: Etcetera-branded Plymouth theme
-
   services.printing.enable = true; # Enable CUPS to print documents.
   services.flatpak.enable = true;
   programs.steam.enable = true;
