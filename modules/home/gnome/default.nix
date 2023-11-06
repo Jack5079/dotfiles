@@ -70,8 +70,8 @@
         disable-user-extensions = false;
         disabled-extensions = [ "activate_gnome@isjerryxiao" "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "activities-filled-pill@verdre" "lightshell@dikasp.gitlab" "paperwm@hedning:matrix.org" ];
         enabled-extensions = [ "gsconnect@andyholmes.github.io" "trayIconsReloaded@selfmade.pl" "flypie@schneegans.github.com" "switch-x11-wayland@prasanthc41m.github.com" "remove-alt-tab-delay@vrba.dev" "light-style@gnome-shell-extensions.gcampax.github.com" "overviewbackground@github.com.orbitcorrection" "just-perfection-desktop@just-perfection" "hotedge@jonathan.jdoda.ca" "waylandorx11@injcristianrojas.github.com" ];
-        favorite-apps = [ "firefox.desktop" "code.desktop" "org.gnome.Console.desktop" "com.github.micahflee.torbrowser-launcher.desktop" "org.gnome.Nautilus.desktop" "gimp.desktop" "org.inkscape.Inkscape.desktop" "org.gnome.design.IconLibrary.desktop" "org.kde.kdenlive.desktop" "com.github.unrud.VideoDownloader.desktop" "com.obsproject.Studio.desktop" "org.blender.Blender.desktop" "obsidian.desktop" "steam.desktop" "org.prismlauncher.PrismLauncher.desktop" "org.yuzu_emu.yuzu.desktop" "element-desktop.desktop" "dev.vlinkz.NixSoftwareCenter.desktop" "org.gnome.Software.desktop" ];
-        welcome-dialog-last-shown-version = "43.2";
+        # favorite-apps = [ "firefox.desktop" "code.desktop" "org.gnome.Console.desktop" "com.github.micahflee.torbrowser-launcher.desktop" "org.gnome.Nautilus.desktop" "gimp.desktop" "org.inkscape.Inkscape.desktop" "org.gnome.design.IconLibrary.desktop" "org.kde.kdenlive.desktop" "com.github.unrud.VideoDownloader.desktop" "com.obsproject.Studio.desktop" "org.blender.Blender.desktop" "obsidian.desktop" "steam.desktop" "org.prismlauncher.PrismLauncher.desktop" "org.yuzu_emu.yuzu.desktop" "element-desktop.desktop" "dev.vlinkz.NixSoftwareCenter.desktop" "org.gnome.Software.desktop" ];
+        # welcome-dialog-last-shown-version = "43.2";
       };
 
       "org/gnome/shell/extensions/flypie" = {
