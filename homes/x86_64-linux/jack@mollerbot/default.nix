@@ -61,4 +61,11 @@
       };
     };
   };
+  services.syncthing = {
+    enable = true;
+    extraOptions = [
+      "--config=${config.xdg.configHome}/syncthing"
+      "--data=${config.home.homeDirectory}/Documents"
+    ];
+  };
 }
