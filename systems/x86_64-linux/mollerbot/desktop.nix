@@ -9,7 +9,7 @@
     };
     excludePackages = [ pkgs.xterm ];
   };
-  environment .gnome.excludePackages = with pkgs; [
+  environment.gnome.excludePackages = with pkgs; [
     gnome-tour # I've used GNOME before
     gnome-photos
     gnome.simple-scan
