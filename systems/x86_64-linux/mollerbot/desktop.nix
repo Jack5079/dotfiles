@@ -39,11 +39,11 @@
   };
 
   fonts = {
-    packages = [ pkgs.inter pkgs.iosevka pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro ]; # TODO: Try out customizing Iosevka to find the most readable, then hardcode that
+    packages = [ pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font ];
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       sansSerif = [ "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
-      monospace = [ "Iosevka" "DejaVu Sans Mono" ];
+      monospace = [ "Go Mono" "DejaVu Sans Mono" ];
     };
   };
   # Custom fonts in Flatpak applications <https://github.com/NixOS/nixpkgs/issues/119433#issuecomment-1326957279>
