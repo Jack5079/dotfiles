@@ -17,9 +17,7 @@
     };
     firefox = {
       url = "github:nix-community/flake-firefox-nightly";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme/nightly"; flake = false; };
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
