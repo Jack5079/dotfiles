@@ -13,7 +13,6 @@
     pkgs.git-absorb
     pkgs.gimp
     pkgs.element-desktop
-    pkgs.obs-studio
     pkgs.piper
     pkgs.beeper
     inputs.nix-software-center.packages.${system}.nix-software-center
@@ -30,6 +29,7 @@
       extraConfig = "$env.config.show_banner = false;";
     };
     bun.enable = true;
+    obs-studio.enable = true;
     vscode.enable = true;
     firefox.enable = true;
     git = {
