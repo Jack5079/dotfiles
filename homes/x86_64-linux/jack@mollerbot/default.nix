@@ -7,7 +7,7 @@
     pkgs.nodePackages_latest.pnpm
     pkgs.arrpc
     pkgs.android-studio
-    pkgs.tenacity
+    pkgs.audacity
     pkgs.whois
     pkgs.fragments
     pkgs.git-absorb
