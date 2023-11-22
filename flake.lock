@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1700608615,
-        "narHash": "sha256-uYwxsBNXyA9nRX4HH1B3VAS7gBBpMSVCwLuAxQOxBmo=",
+        "lastModified": 1700673282,
+        "narHash": "sha256-Hh7bVMxcKSRERAFbnIPaJ6600CvTKXfTOMqc1e65+ng=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "e68f982416aeba813acb6f6156343a577ba0458f",
+        "rev": "a293dcea69585fae7bad3512f127b461dd373c7b",
         "type": "github"
       },
       "original": {
@@ -43,11 +43,11 @@
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1700591188,
-        "narHash": "sha256-CBw2JMrQO5ymFVyR/Qtcn5iTp+Hp0sQe7v0DviH9zRY=",
+        "lastModified": 1700668802,
+        "narHash": "sha256-HMMM4aKfDPx8m5IoTc4dCh01ZaBf0upEXPEjIcFsa4s=",
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
-        "rev": "5e796d330d3765798d32b361638b048fda1a1450",
+        "rev": "f65ccefb05b98bf34441ca2abddda5af9a5e2680",
         "type": "github"
       },
       "original": {
@@ -281,6 +281,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-with-inter-v4": {
+      "locked": {
+        "lastModified": 1700456905,
+        "narHash": "sha256-/QVj9R2oP1Rk7HGbZyFWNLdWC2NblsNlHeIF7bHoTaA=",
+        "owner": "SharzyL",
+        "repo": "nixpkgs",
+        "rev": "c6a430429776cf591042557a4a117b485d55ebb2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SharzyL",
+        "ref": "inter_4",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1684570954,
@@ -304,6 +320,7 @@
         "home-manager": "home-manager",
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-with-inter-v4": "nixpkgs-with-inter-v4",
         "snowfall-lib": "snowfall-lib",
         "vscode-extensions": "vscode-extensions"
       }
