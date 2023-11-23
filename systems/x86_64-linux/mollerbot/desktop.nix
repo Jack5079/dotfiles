@@ -16,7 +16,7 @@
     gnome.gnome-maps # I have a desktop
     gnome.seahorse
     gnome.geary
-    gnome.cheese # I do not have a webcam
+    snapshot # I do not have a webcam
     epiphany # Sometimes I uncomment this to test WebKit
     gnome.gnome-music # I use Amberol instead
   ];
