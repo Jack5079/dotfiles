@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, inputs, ... }: {
   # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # https://github.com/NixOS/nixpkgs/issues/155291#issuecomment-1166199585
   services.xserver = {
     enable = true;
@@ -39,11 +39,11 @@
   };
 
   fonts = {
-    packages = [ pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font ];
+    packages = [ inputs.nixpkgs-with-inter-v4.legacyPackages.${pkgs.system}.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font pkgs.monaspace ];
     fontDir.enable = true;
     fontconfig.defaultFonts = {
-      sansSerif = [ "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
-      monospace = [ "Go Mono" "DejaVu Sans Mono" ];
+      sansSerif = [ "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
+      monospace = [ "Monaspace Neon Var" "Monaspace Neon Regular" "DejaVu Sans Mono" ];
     };
   };
   # Custom fonts in Flatpak applications <https://github.com/NixOS/nixpkgs/issues/119433#issuecomment-1326957279>
