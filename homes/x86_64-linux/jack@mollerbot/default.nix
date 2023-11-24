@@ -1,4 +1,4 @@
-{ inputs, pkgs, system, ... }: {
+{ inputs, pkgs, config, osConfig, ... }: {
   home.stateVersion = "23.05";
   home.packages = [
     pkgs.obsidian
@@ -15,7 +15,7 @@
     pkgs.element-desktop
     pkgs.piper
     pkgs.beeper
-    inputs.nix-software-center.packages.${system}.nix-software-center
+    inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
     pkgs.me.skylight-wallpaper
     (pkgs.discord-canary.override {
       withOpenASAR = true;
