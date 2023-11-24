@@ -3,13 +3,12 @@
     home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
     programs.firefox = {
       package = inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin.override {
-        cfg = {
-          enableGnomeExtensions = osConfig.services.xserver.desktopManager.gnome.enable;
-          enablePlasmaBrowserIntegration = osConfig.services.xserver.desktopManager.plasma5.enable;
-        };
-        nativeMessagingHosts = [
-          inputs.pipewire-screenaudio.packages.${pkgs.system}.default
-        ] ++ lib.optional osConfig.services.xserver.desktopManager.gnome.enable pkgs.gnomeExtensions.gsconnect;
+        nativeMessagingHosts = lib.optionals osConfig.services.xserver.desktopManager.gnome.enable [
+          pkgs.gnomeExtensions.gsconnect
+          pkgs.gnome-browser-connector
+        ] ++ lib.optionals osConfig.services.xserver.desktopManager.plasma5.enable [
+          pkgs.plasma5Packages.plasma-browser-integration
+        ];
       };
       profiles.default = {
         isDefault = true;
