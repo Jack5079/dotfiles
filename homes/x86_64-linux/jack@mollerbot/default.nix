@@ -9,7 +9,7 @@
     pkgs.android-studio
     pkgs.audacity
     pkgs.whois
-    pkgs.fragments
+    pkgs.transmission_4-gtk
     pkgs.git-absorb
     pkgs.gimp
     pkgs.element-desktop
