@@ -45,11 +45,13 @@
   programs.steam.enable = true;
   programs.virt-manager.enable = true;
 
-  # https://github.com/luishfonseca/dotfiles/blob/main/modules/upgrade-diff.nix
+  # https://github.com/nix-community/srvos/blob/main/nixos/common/upgrade-diff.nix
   system.activationScripts.diff = {
     supportsDryActivation = true;
     text = ''
-      ${lib.getExe pkgs.nvd} --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
+      if [[ -e /run/current-system ]]; then
+        ${lib.getExe pkgs.nvd} --nix-bin-dir=${config.nix.package}/bin diff /run/current-system "$systemConfig"
+      fi
     '';
   };
   services.gpm.enable = true;
