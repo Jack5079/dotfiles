@@ -17,6 +17,10 @@
     pkgs.beeper
     inputs.nix-software-center.packages.${system}.nix-software-center
     pkgs.me.skylight-wallpaper
+    (pkgs.discord-canary.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
   ];
   programs = {
     nushell = {
