@@ -17,6 +17,17 @@ in
       # https://xeiaso.net/blog/paranoid-nixos-2021-07-18
       security.sudo.execWheelOnly = true;
       environment.defaultPackages = lib.mkForce [ ]; # Currently only perl, rsync, and strace
+      # Avoid TOFU MITM with git hosts by providing their public keys here.
+      programs.ssh.knownHosts = {
+        "github.com".hostNames = [ "github.com" ];
+        "github.com".publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl";
+
+        "gitlab.com".hostNames = [ "gitlab.com" ];
+        "gitlab.com".publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAfuCHKVTjquxvt6CM6tdG4SLp1Btn/nOeHHE5UOzRdf";
+
+        "git.sr.ht".hostNames = [ "git.sr.ht" ];
+        "git.sr.ht".publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZvRd4EtM7R+IHVMWmDkVU3VLQTSwQDSAvW0t2Tkj60";
+      };
     }
     // lib.mkIf config.programs.virt-manager.enable {
       # https://github.com/NixOS/nixpkgs/issues/223594#issuecomment-1527956398
