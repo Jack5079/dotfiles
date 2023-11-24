@@ -18,6 +18,7 @@
     inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
     (if osConfig.services.xserver.desktopManager.plasma5.enable then pkgs.prismlauncher-qt5 else pkgs.prismlauncher) # Change this to just `pkgs.prismlauncher` when Plasma 6 is out
     pkgs.me.skylight-wallpaper
+    pkgs.libsForQt5.kdenlive
     (pkgs.discord-canary.override {
       withOpenASAR = true;
       withVencord = true;
