@@ -13,6 +13,7 @@
     pkgs.git-absorb
     pkgs.gimp
     pkgs.element-desktop
+    pkgs.tor-browser
     pkgs.piper
     pkgs.beeper
     inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
