@@ -64,6 +64,7 @@
         focus-change-on-pointer-rest = true;
         overlay-key = "Super_L";
         workspaces-only-on-primary = true;
+        experimental-features = ["scale-monitor-framebuffer"];
       };
 
       "org/gnome/shell" = {
