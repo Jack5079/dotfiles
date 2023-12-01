@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1701386156,
-        "narHash": "sha256-Pg6n36pdjIg2DCWkjytX4dECsmA5S+k4pq2Yi+jbaZo=",
+        "lastModified": 1701450914,
+        "narHash": "sha256-0ikei2QP1oU7Zpga9+2opYx6/nwbRFdh2yZGZuFx4xU=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "083e89ba92b5a6894f90af70d5d38b23f0f290fd",
+        "rev": "4f0642ca3980ea78343dc274f2cc941fabf3ca22",
         "type": "github"
       },
       "original": {
@@ -183,11 +183,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1701071203,
-        "narHash": "sha256-lQywA7QU/vzTdZ1apI0PfgCWNyQobXUYghVrR5zuIeM=",
+        "lastModified": 1701433070,
+        "narHash": "sha256-Gf9JStfENaUQ7YWFz3V7x/srIwr4nlnVteqaAxtwpgM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "db1878f013b52ba5e4034db7c1b63e8d04173a86",
+        "rev": "4a8545f5e737a6338814a4676dc8e18c7f43fc57",
         "type": "github"
       },
       "original": {
@@ -253,11 +253,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1701068326,
-        "narHash": "sha256-vmMceA+q6hG1yrjb+MP8T0YFDQIrW3bl45e7z24IEts=",
+        "lastModified": 1701253981,
+        "narHash": "sha256-ztaDIyZ7HrTAfEEUt9AtTDNoCYxUdSd6NrRHaYOIxtk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8cfef6986adfb599ba379ae53c9f5631ecd2fd9c",
+        "rev": "e92039b55bcd58469325ded85d4f58dd5a4eaf58",
         "type": "github"
       },
       "original": {
@@ -278,22 +278,6 @@
       "original": {
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
-        "type": "github"
-      }
-    },
-    "nixpkgs-with-inter-v4": {
-      "locked": {
-        "lastModified": 1700456905,
-        "narHash": "sha256-/QVj9R2oP1Rk7HGbZyFWNLdWC2NblsNlHeIF7bHoTaA=",
-        "owner": "SharzyL",
-        "repo": "nixpkgs",
-        "rev": "c6a430429776cf591042557a4a117b485d55ebb2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "SharzyL",
-        "ref": "inter_4",
-        "repo": "nixpkgs",
         "type": "github"
       }
     },
@@ -320,7 +304,6 @@
         "home-manager": "home-manager",
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-with-inter-v4": "nixpkgs-with-inter-v4",
         "snowfall-lib": "snowfall-lib",
         "vscode-extensions": "vscode-extensions"
       }
@@ -432,11 +415,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1701307184,
-        "narHash": "sha256-nyWkaA82eLOIr96taEN40OegFC9HW3VUMe9U1VIwEpE=",
+        "lastModified": 1701394021,
+        "narHash": "sha256-5ZEIX2Di/x0GAu9xAP+7tcy7hPu39lhLADwt/YR8Wk0=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "dfa26d229c753269091235e1a27d0bb9002cbb66",
+        "rev": "d1f015cf54328b5c96a6f9d68f615f18ddac9264",
         "type": "github"
       },
       "original": {

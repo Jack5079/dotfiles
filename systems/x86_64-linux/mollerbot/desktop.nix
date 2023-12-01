@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }: {
+{ pkgs, config, ... }: {
   # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # https://github.com/NixOS/nixpkgs/issues/155291#issuecomment-1166199585
   services.xserver = {
     enable = true;
@@ -39,7 +39,7 @@
   };
 
   fonts = {
-    packages = [ inputs.nixpkgs-with-inter-v4.legacyPackages.${pkgs.system}.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font pkgs.monaspace ];
+    packages = [ pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font pkgs.monaspace ];
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       sansSerif = [ "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
