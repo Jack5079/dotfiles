@@ -17,7 +17,6 @@
 * [`homeModules.bun`](./modules/home/bun/default.nix): Installs [Bun](https://bun.sh) and [gets its lockfiles working in `git diff`](https://bun.sh/docs/install/lockfile#how-do-i-git-diff-bun-s-lockfile)
 * [`homeModules.firefox`](./modules/home/firefox/default.nix): Configures Firefox with the [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) and allows desktop integrations to work
 * [`homeModules.gnome`](./modules/home/gnome/default.nix): Configures GNOME extensions, favorite apps, and keybindings
-* [`homeModules.virt-manager`](./modules/home/virt-manager/default.nix): Installs virt-manager when `nixosConfigurations.virt-manager` is enabled
 * [`homeModules.vscode`](./modules/home/vscode/default.nix): Visual Studio Code [extensions](./modules/home/vscode/extensions.nix) and [snippets](./modules/home/vscode/snippets.nix)
 * [`nixosConfigurations.mollerbot`](./systems/x86_64-linux/mollerbot/default.nix): My NixOS configuration
 * [`nixosModules.hardened`](./modules/nixos/hardened/default.nix): Security settings for NixOS
