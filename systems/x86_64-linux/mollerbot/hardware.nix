@@ -10,6 +10,11 @@
   boot.initrd.kernelModules = [ ];
   boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ]; # https://github.com/atar-axis/xpadneo/
 
+  # https://www.freedesktop.org/wiki/Software/systemd/Optimizations/
+  # https://wiki.archlinux.org/title/Improving_performance/Boot_process
+  boot.kernelParams = ["libahci.ignore_sss=1" "quiet"];
+  
+
   fileSystems."/" =
     {
       device = "/dev/disk/by-uuid/89b2dc1f-e231-4bcb-b67a-25f49a32ada6";
