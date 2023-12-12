@@ -5,7 +5,7 @@
     displayManager.gdm.enable = true;
     desktopManager = {
       gnome.enable = true;
-      plasma5.enable = true;
+      plasma5.enable = false;
     };
     excludePackages = [ pkgs.xterm ];
   };
