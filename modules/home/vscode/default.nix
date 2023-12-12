@@ -11,7 +11,9 @@
       # https://github.com/nix-community/home-manager/issues/4394#issuecomment-1712909231
       mutableExtensionsDir = false;
       languageSnippets = import ./snippets.nix;
-      extensions = import ./extensions.nix inputs.vscode-extensions.extensions.${pkgs.system}.vscode-marketplace;
+      extensions = pkgs.callPackage ./extensions.nix {
+        extensions = (inputs.vscode-extensions.extensions.${pkgs.system}.forVSCodeVersion pkgs.vscode.version).vscode-marketplace;
+      };
     };
   };
 }

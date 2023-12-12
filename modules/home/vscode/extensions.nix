@@ -1,4 +1,4 @@
-extensions: builtins.concatLists (builtins.attrValues {
+{extensions, pkgs}: builtins.concatLists (builtins.attrValues {
   markdown = with extensions; [
     bierner.markdown-emoji
     bierner.markdown-mermaid
@@ -56,6 +56,7 @@ extensions: builtins.concatLists (builtins.attrValues {
     editorconfig.editorconfig
     esbenp.prettier-vscode
     github.remotehub
+    pkgs.vscode-extensions.github.vscode-pull-request-github
     hbenl.vscode-test-explorer
     icrawl.discord-vscode
     jnoortheen.nix-ide
