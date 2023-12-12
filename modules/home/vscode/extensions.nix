@@ -9,7 +9,6 @@ extensions: builtins.concatLists (builtins.attrValues {
     yzhang.markdown-all-in-one
   ];
   fullstack = with extensions; [
-    extensions."30-seconds"."30-seconds-of-code"
     astro-build.astro-vscode
     bierner.comment-tagged-templates
     codespaces-contrib.codeswing
