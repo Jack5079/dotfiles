@@ -1,19 +1,19 @@
-{ config, lib, modulesPath, ... }:
+{ config, lib, modulesPath, pkgs, ... }:
 
 {
   imports =
     [
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
-  # boot.kernelPackages = pkgs.linuxPackages_latest; # "the hardened patches frequently lag behind the upstream kernel." https://github.com/NixOS/nixpkgs/blob/f7edf57b886d3f0f52a224f993bce1d0cb740232/pkgs/top-level/aliases.nix#L497
+  boot.kernelPackages = pkgs.linuxPackages_latest; # "the hardened patches frequently lag behind the upstream kernel." https://github.com/NixOS/nixpkgs/blob/f7edf57b886d3f0f52a224f993bce1d0cb740232/pkgs/top-level/aliases.nix#L497
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ]; # https://github.com/atar-axis/xpadneo/
 
   # https://www.freedesktop.org/wiki/Software/systemd/Optimizations/
   # https://wiki.archlinux.org/title/Improving_performance/Boot_process
-  boot.kernelParams = ["libahci.ignore_sss=1" "quiet"];
-  
+  boot.kernelParams = [ "libahci.ignore_sss=1" "quiet" ];
+
 
   fileSystems."/" =
     {
