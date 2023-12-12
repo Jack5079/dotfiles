@@ -4,7 +4,7 @@
   config = lib.mkIf osConfig.services.xserver.desktopManager.gnome.enable {
     # GSConnect was installed in systems/x84_64-linux/mollerbot/phone.nix when I set programs.kdeconnect.package
     home.packages = with pkgs.gnomeExtensions; [
-      tray-icons-reloaded
+      appindicator
       hot-edge
       just-perfection
       paperwm
