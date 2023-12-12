@@ -28,7 +28,12 @@
   outputs = inputs:
     inputs.snowfall-lib.mkFlake {
       inherit inputs;
-      channels-config.allowUnfree = true;
+      channels-config = {
+        allowUnfree = true;
+        permittedInsecurePackages = [
+          "electron-25.9.0"
+        ];
+      };
       namespace = "me";
       package-namespace = "me";
       src = ./.;
