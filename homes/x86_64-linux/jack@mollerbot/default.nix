@@ -1,9 +1,5 @@
 { inputs, pkgs, config, osConfig, ... }: {
   home.stateVersion = "23.05";
-  imports = [
-    inputs.nix-index-database.hmModules.nix-index
-    { programs.nix-index-database.comma.enable = true; }
-  ];
   home.packages = [
     pkgs.obsidian
     pkgs.songrec
@@ -35,6 +31,7 @@
       };
       extraConfig = "$env.config.show_banner = false;";
     };
+    nix-index-database.comma.enable = true;
     bun.enable = true;
     obs-studio.enable = true;
     vscode.enable = true;

@@ -37,5 +37,9 @@
       namespace = "me";
       package-namespace = "me";
       src = ./.;
+
+      homes.users."jack@mollerbot".modules = with inputs; [
+        nix-index-database.hmModules.nix-index # Comma
+      ];
     };
 }
