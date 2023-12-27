@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-software-center = {
-      url = "github:vlinkz/nix-software-center";
+      url = "github:snowfallorg/nix-software-center";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
