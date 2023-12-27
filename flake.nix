@@ -36,6 +36,7 @@
       };
       namespace = "me";
       package-namespace = "me";
+      snowfall.namespace = "me";
       src = ./.;
     };
 }
