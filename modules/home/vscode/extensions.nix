@@ -1,4 +1,4 @@
-{extensions, pkgs}: builtins.concatLists (builtins.attrValues {
+{ extensions, pkgs }: builtins.concatLists (builtins.attrValues {
   markdown = with extensions; [
     bierner.markdown-emoji
     bierner.markdown-mermaid
@@ -62,7 +62,7 @@
     jnoortheen.nix-ide
     mhutchie.git-graph
     mikestead.dotenv
-    ms-vscode-remote.remote-ssh
+    pkgs.vscode-extensions.ms-vscode-remote.remote-ssh
     ms-vscode-remote.remote-ssh-edit
     ms-vscode.hexeditor
     ms-vscode.remote-explorer
