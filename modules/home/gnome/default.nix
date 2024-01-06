@@ -62,14 +62,51 @@
         focus-change-on-pointer-rest = true;
         overlay-key = "Super_L";
         workspaces-only-on-primary = true;
-        experimental-features = ["scale-monitor-framebuffer"];
+        experimental-features = [ "scale-monitor-framebuffer" ];
       };
 
       "org/gnome/shell" = {
         disable-user-extensions = false;
-        disabled-extensions = [ "activate_gnome@isjerryxiao" "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "activities-filled-pill@verdre" "lightshell@dikasp.gitlab" "paperwm@hedning:matrix.org" ];
-        enabled-extensions = [ "gsconnect@andyholmes.github.io" "trayIconsReloaded@selfmade.pl" "flypie@schneegans.github.com" "switch-x11-wayland@prasanthc41m.github.com" "remove-alt-tab-delay@vrba.dev" "light-style@gnome-shell-extensions.gcampax.github.com" "overviewbackground@github.com.orbitcorrection" "just-perfection-desktop@just-perfection" "hotedge@jonathan.jdoda.ca" "waylandorx11@injcristianrojas.github.com" ];
-        favorite-apps = [ "firefox-nightly.desktop" "code.desktop" "org.gnome.Console.desktop" "com.github.micahflee.torbrowser-launcher.desktop" "org.gnome.Nautilus.desktop" "beeper.desktop" "gimp.desktop" "org.inkscape.Inkscape.desktop" "org.gnome.design.IconLibrary.desktop" "org.kde.kdenlive.desktop" "com.github.unrud.VideoDownloader.desktop" "com.obsproject.Studio.desktop" "org.blender.Blender.desktop" "obsidian.desktop" "steam.desktop" "org.prismlauncher.PrismLauncher.desktop" "org.yuzu_emu.yuzu.desktop" "element-desktop.desktop" "dev.vlinkz.NixSoftwareCenter.desktop" "org.gnome.Software.desktop" ];
+        disabled-extensions = [
+          "activate_gnome@isjerryxiao"
+          "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
+          "user-theme@gnome-shell-extensions.gcampax.github.com"
+          "lightshell@dikasp.gitlab"
+          "paperwm@hedning:matrix.org"
+        ];
+        enabled-extensions = [
+          "gsconnect@andyholmes.github.io"
+          "appindicatorsupport@rgcjonas.gmail.com"
+          "flypie@schneegans.github.com"
+          "switch-x11-wayland@prasanthc41m.github.com"
+          "light-style@gnome-shell-extensions.gcampax.github.com"
+          "overviewbackground@github.com.orbitcorrection"
+          "just-perfection-desktop@just-perfection"
+          "hotedge@jonathan.jdoda.ca"
+          "waylandorx11@injcristianrojas.github.com"
+        ];
+        favorite-apps = [
+          "firefox-nightly.desktop"
+          "code.desktop"
+          "org.gnome.Console.desktop"
+          "thunderbird.desktop"
+          "obsidian.desktop"
+          "torbrowser.desktop"
+          "org.gnome.Nautilus.desktop"
+          "vencorddesktop.desktop"
+          "org.gnome.Fractal.desktop"
+          "gimp.desktop"
+          "org.inkscape.Inkscape.desktop"
+          "org.gnome.design.IconLibrary.desktop"
+          "org.kde.kdenlive.desktop"
+          "com.github.unrud.VideoDownloader.desktop"
+          "com.obsproject.Studio.desktop"
+          "org.blender.Blender.desktop"
+          "steam.desktop"
+          "org.prismlauncher.PrismLauncher.desktop"
+          "dev.vlinkz.NixSoftwareCenter.desktop"
+          "org.gnome.Software.desktop"
+        ];
         welcome-dialog-last-shown-version = "1000000";
       };
 
