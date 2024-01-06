@@ -279,6 +279,7 @@
         search = false;
         theme = true;
         top-panel-position = 1;
+        switcher-popup-delay = true;
       };
 
     };
