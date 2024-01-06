@@ -3,8 +3,7 @@
 let
   cfg = config.programs.bun;
   tomlFormat = pkgs.formats.toml { };
-in
-{
+in {
   options.programs.bun = {
     enable = lib.mkEnableOption "Bun JavaScript runtime";
     package = lib.mkPackageOption pkgs "bun" { };
@@ -45,7 +44,8 @@ in
     };
 
     # https://bun.sh/docs/install/lockfile#how-do-i-git-diff-bun-s-lockfile
-    programs.git.attributes = lib.mkIf cfg.enableGitIntegration [ "*.lockb binary diff=lockb" ];
+    programs.git.attributes =
+      lib.mkIf cfg.enableGitIntegration [ "*.lockb binary diff=lockb" ];
     programs.git.extraConfig.diff.lockb = lib.mkIf cfg.enableGitIntegration {
       textconv = lib.getExe cfg.package;
       binary = true;
