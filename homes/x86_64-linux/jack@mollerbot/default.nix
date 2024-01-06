@@ -16,6 +16,7 @@
     pkgs.git-absorb
     pkgs.gimp
     pkgs.tor-browser
+    pkgs.thunderbird
     pkgs.piper
     pkgs.fractal
     inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
