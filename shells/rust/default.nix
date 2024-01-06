@@ -1,8 +1,9 @@
-{ pkgs, ... }:
+{ pkgs }:
 pkgs.mkShell {
   packages = [
     pkgs.rustc
     pkgs.cargo
+    pkgs.cargo-watch
     pkgs.rust-analyzer
     pkgs.rustfmt
     pkgs.clippy

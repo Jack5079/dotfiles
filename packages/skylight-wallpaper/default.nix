@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib }:
 pkgs.writeTextFile {
   name = "skylight-wallpaper";
   destination = "/share/gnome-background-properties/skylight.xml";
