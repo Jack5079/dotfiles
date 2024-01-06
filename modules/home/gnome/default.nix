@@ -13,6 +13,7 @@
     ] ++ [
       pkgs.adw-gtk3
       pkgs.gnome.gnome-tweaks
+      pkgs.me.skylight-wallpaper
     ];
 
     dconf.settings = {
