@@ -34,7 +34,10 @@
         nx = "nix develop --command hx";
         nv = "nix develop --command code";
       };
-      extraConfig = "$env.config.show_banner = false;";
+      extraConfig = ''
+        $env.config.show_banner = false;
+        $env.config.shell_integration = true;
+      '';
     };
     bun.enable = true;
     obs-studio.enable = true;
