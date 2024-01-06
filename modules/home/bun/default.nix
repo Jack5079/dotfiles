@@ -7,7 +7,7 @@ in
 {
   options.programs.bun = {
     enable = lib.mkEnableOption "Bun JavaScript runtime";
-    package = lib.mkPackageOption pkgs "bun" {};
+    package = lib.mkPackageOption pkgs "bun" { };
     settings = lib.mkOption {
       type = tomlFormat.type;
       default = { };
@@ -32,6 +32,9 @@ in
         for the full list of options.
       '';
     };
+    enableGitIntegration = lib.mkEnableOption "Git integration" // {
+      default = true;
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -42,8 +45,8 @@ in
     };
 
     # https://bun.sh/docs/install/lockfile#how-do-i-git-diff-bun-s-lockfile
-    programs.git.attributes = [ "*.lockb binary diff=lockb" ];
-    programs.git.extraConfig.diff.lockb = {
+    programs.git.attributes = lib.mkIf cfg.enableGitIntegration [ "*.lockb binary diff=lockb" ];
+    programs.git.extraConfig.diff.lockb = lib.mkIf cfg.enableGitIntegration {
       textconv = lib.getExe cfg.package;
       binary = true;
     };
