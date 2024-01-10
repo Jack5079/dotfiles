@@ -8,6 +8,7 @@
     pkgs.obsidian
     pkgs.songrec
     pkgs.helvum
+    pkgs.eyedropper
     pkgs.nodePackages_latest.pnpm
     pkgs.androidStudioPackages.canary
     pkgs.audacity
