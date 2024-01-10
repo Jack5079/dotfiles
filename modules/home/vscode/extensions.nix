@@ -45,9 +45,10 @@
   ];
   rust = with extensions; [
     relm4.relm4-snippets
-    rust-lang.rust-analyzer
+    pkgs.vscode-extensions.rust-lang.rust-analyzer
     swellaby.vscode-rust-test-adapter
     tamasfe.even-better-toml
+    kale-lab.salt
   ];
   other = with extensions; [
     amazonwebservices.aws-toolkit-vscode
@@ -75,7 +76,7 @@
     thenuprojectcontributors.vscode-nushell-lang
     ultram4rine.vscode-choosealicense
     usernamehw.errorlens
-    vadimcn.vscode-lldb
+    pkgs.vscode-extensions.vadimcn.vscode-lldb
     visualstudioexptteam.intellicode-api-usage-examples
     visualstudioexptteam.vscodeintellicode
     vivaxy.vscode-conventional-commits
