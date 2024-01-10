@@ -16,7 +16,12 @@
     pkgs.transmission_4-gtk
     pkgs.inkscape
     pkgs.git-absorb
-    pkgs.gimp
+    (pkgs.gimp-with-plugins.override {
+      plugins = [(pkgs.gimpPlugins.resynthesizer.overrideAttrs {
+        src = inputs.resynthesizer-scm;
+        meta.broken = false;
+      })];
+    })
     pkgs.tor-browser
     pkgs.thunderbird
     pkgs.piper

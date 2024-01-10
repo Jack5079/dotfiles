@@ -317,6 +317,22 @@
         "type": "github"
       }
     },
+    "resynthesizer-scm": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696096335,
+        "narHash": "sha256-1cItVtQejZgV+Q1ppVOsGC+C4badi2nHj/c9hljM1YE=",
+        "owner": "itr-tert",
+        "repo": "gimp-resynthesizer-scm",
+        "rev": "701e890d1d456e215e05daa7b4a88f5d9c6c03b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "itr-tert",
+        "repo": "gimp-resynthesizer-scm",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "firefox": "firefox",
@@ -325,6 +341,7 @@
         "nix-index-database": "nix-index-database",
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
+        "resynthesizer-scm": "resynthesizer-scm",
         "snowfall-lib": "snowfall-lib",
         "vscode-extensions": "vscode-extensions"
       }
