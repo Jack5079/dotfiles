@@ -9,7 +9,7 @@
     pkgs.songrec
     pkgs.helvum
     pkgs.nodePackages_latest.pnpm
-    pkgs.android-studio
+    pkgs.androidStudioPackages.canary
     pkgs.audacity
     pkgs.whois
     pkgs.gpu-screen-recorder-gtk
