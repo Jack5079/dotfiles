@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "adwaita-for-steam": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1700113920,
+        "narHash": "sha256-eWnq+Sag9WfhzWqv0Vin0zs0pjHrFFgE4mKKg5PwVlc=",
+        "owner": "tkashkin",
+        "repo": "Adwaita-for-Steam",
+        "rev": "75d4092bdd096920fcf665b6287a6b388e190caf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tkashkin",
+        "repo": "Adwaita-for-Steam",
+        "type": "github"
+      }
+    },
     "cachix": {
       "locked": {
         "lastModified": 1635350005,
@@ -27,11 +43,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1705079740,
-        "narHash": "sha256-v+hSDzNemSL46rhH016yNtiaoBo/W1Y+L3yhZnIXcK0=",
+        "lastModified": 1705148806,
+        "narHash": "sha256-x4qcxJQLqLRJ4JCGHE98vuk9hYztzBnPV5JQ83F3WOQ=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "129e8b07c3ed36a02c478ced1878355f185d9621",
+        "rev": "1623263caf418d622f2148dd057a8104f7bf73d6",
         "type": "github"
       },
       "original": {
@@ -183,11 +199,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1704980804,
-        "narHash": "sha256-lPNNKdPqIYcjhhYIVwlajNt/HqVWbMOoSdNnwCvOP04=",
+        "lastModified": 1705169127,
+        "narHash": "sha256-j9OEtNxOIPWZWjbECVMkI1TO17SzlpHMm0LnVWKOR/g=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "93e804e7f8a1eb88bde6117cd5046501e66aa4bd",
+        "rev": "f2942f3385f1b35cc8a1abb03a45e29c9cb4d3c8",
         "type": "github"
       },
       "original": {
@@ -335,6 +351,7 @@
     },
     "root": {
       "inputs": {
+        "adwaita-for-steam": "adwaita-for-steam",
         "firefox": "firefox",
         "firefox-gnome-theme": "firefox-gnome-theme",
         "home-manager": "home-manager",
@@ -453,11 +470,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1705022460,
-        "narHash": "sha256-SOLOCrCLxp7W4tDDgmDTDPNw7lcf18ZIcniXwNORkT4=",
+        "lastModified": 1705108826,
+        "narHash": "sha256-1xOzPcS8Zr4rqgLoaRwAcKqdCdzrBDaNwT+tiBdXf18=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "cc030ff88be6c4d8d2933b5682c9c8d966f74429",
+        "rev": "92fd8c24719f08692c36b685de6884a20080edf0",
         "type": "github"
       },
       "original": {
