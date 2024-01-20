@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "adwaita-for-steam": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1705687614,
-        "narHash": "sha256-oSd/Qv+T3d/3sdNSV8cLPUmzmqYQiCFEHelY0Ku5ftA=",
-        "owner": "tkashkin",
-        "repo": "Adwaita-for-Steam",
-        "rev": "c5f7b601791b51df11958a7698c0f43c5a730c71",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tkashkin",
-        "repo": "Adwaita-for-Steam",
-        "type": "github"
-      }
-    },
     "cachix": {
       "locked": {
         "lastModified": 1635350005,
@@ -351,7 +335,6 @@
     },
     "root": {
       "inputs": {
-        "adwaita-for-steam": "adwaita-for-steam",
         "firefox": "firefox",
         "firefox-gnome-theme": "firefox-gnome-theme",
         "home-manager": "home-manager",
