@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1706915754,
-        "narHash": "sha256-QysNYWtHVsgSoeYLohruqkRTw5t0z/U7W5jhLtt0o/s=",
+        "lastModified": 1706963038,
+        "narHash": "sha256-vQEkve6Pi94+Zqzw20gR/JtZW7T+8MmZHOYWpQasbWk=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "d7719307d09ecd9e9d2cfc9668d4a4ceb9ea3103",
+        "rev": "4c9404c243c0cd869f2e2cbb413e89c9400ebb10",
         "type": "github"
       },
       "original": {
@@ -183,11 +183,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1706798041,
-        "narHash": "sha256-BbvuF4CsVRBGRP8P+R+JUilojk0M60D7hzqE0bEvJBQ=",
+        "lastModified": 1706985585,
+        "narHash": "sha256-ptshv4qXiC6V0GCfpABz88UGGPNwqs5tAxaRUKbk1Qo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "4d53427bce7bf3d17e699252fd84dc7468afc46e",
+        "rev": "1ca210648a6ca9b957efde5da957f3de6b1f0c45",
         "type": "github"
       },
       "original": {
@@ -320,11 +320,11 @@
     "resynthesizer-scm": {
       "flake": false,
       "locked": {
-        "lastModified": 1696096335,
-        "narHash": "sha256-1cItVtQejZgV+Q1ppVOsGC+C4badi2nHj/c9hljM1YE=",
+        "lastModified": 1706963937,
+        "narHash": "sha256-Zc1wJaT7a9GCa6EaoyAwXaHk59lYYwrEHY1KGbPu6ic=",
         "owner": "itr-tert",
         "repo": "gimp-resynthesizer-scm",
-        "rev": "701e890d1d456e215e05daa7b4a88f5d9c6c03b3",
+        "rev": "c44500b86e298433c32b0a4b05caf63b8811f959",
         "type": "github"
       },
       "original": {
