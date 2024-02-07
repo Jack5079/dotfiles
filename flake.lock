@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1707094644,
-        "narHash": "sha256-uyDAI7gVI9za7CzN3hykH0GupBjisb4wMWuYwGLuCks=",
+        "lastModified": 1707232588,
+        "narHash": "sha256-73VL5ckAkOLx0ETRYYn59Wljp5RHaJkG0Msnlm2t1+s=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "57df49781ef1b803e9b8f39509d32f864824df87",
+        "rev": "5b3df60fc5e3f5c3ffa38294379344b3e9060603",
         "type": "github"
       },
       "original": {
@@ -183,11 +183,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1707088232,
-        "narHash": "sha256-nxPBAZ//BwKkBcjwLE5g9zTq29g7gccTnH5+CeMTxpA=",
+        "lastModified": 1707175763,
+        "narHash": "sha256-0MKHC6tQ4KEuM5rui6DjKZ/VNiSANB4E+DJ/+wPS1PU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "4740f2ccda184e9cc509d7a82b26d7271e0c79d9",
+        "rev": "f99eace7c167b8a6a0871849493b1c613d0f1b80",
         "type": "github"
       },
       "original": {
@@ -273,11 +273,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1706913249,
-        "narHash": "sha256-x3M7iV++CsvRXI1fpyFPduGELUckZEhSv0XWnUopAG8=",
+        "lastModified": 1707092692,
+        "narHash": "sha256-ZbHsm+mGk/izkWtT4xwwqz38fdlwu7nUUKXTOmm4SyE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e92b6015881907e698782c77641aa49298330223",
+        "rev": "faf912b086576fd1a15fca610166c98d47bc667e",
         "type": "github"
       },
       "original": {
@@ -346,25 +346,8 @@
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
         "resynthesizer-scm": "resynthesizer-scm",
-        "shin": "shin",
         "snowfall-lib": "snowfall-lib",
         "vscode-extensions": "vscode-extensions"
-      }
-    },
-    "shin": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1667278418,
-        "narHash": "sha256-8oER7jfKZePru6gx2Y77Iz/PkVzg1p1gJjk/QKtnuRQ=",
-        "owner": "p-e-w",
-        "repo": "shin",
-        "rev": "a081ee0b7e2d1508f6f967ed37dd96849795ba50",
-        "type": "github"
-      },
-      "original": {
-        "owner": "p-e-w",
-        "repo": "shin",
-        "type": "github"
       }
     },
     "snowfall-lib": {
@@ -474,11 +457,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1707095870,
-        "narHash": "sha256-uXGwteT5pK/PsE4ZYLViB9qKOFx8QrnUMOka+qCBhK0=",
+        "lastModified": 1707182119,
+        "narHash": "sha256-Egt1PmjNAbx2nS0h/iWpaTCcOzLPHpRXzTJBt3waEAs=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "877e91d0227f0662a1e559af0e9836f2a8747178",
+        "rev": "4e7767c214364217e0a7611dca3f3420555ceb20",
         "type": "github"
       },
       "original": {
