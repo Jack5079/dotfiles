@@ -1,6 +1,6 @@
 { lib }: {
-  patchOutput = originalPackage: cmd: originalPackage.overrideAttrs (old: {
-    pname = "${old.pname}-overridden";
+  patchOutput = old: cmd: old.stdenv.mkDerivation {
+    name = "${old.name}-overridden";
 
     # Using `buildCommand` replaces the original packages build phases.
     buildCommand = ''
@@ -18,7 +18,7 @@
               ''
                 echo "Copying output ${outputName}"
                 set -x
-                cp -rs --no-preserve=mode "${originalPackage.${outputName}}" "''$${outputName}"
+                cp -rs --no-preserve=mode "${old.${outputName}}" "''$${outputName}"
                 set +x
               ''
             )
@@ -28,6 +28,6 @@
 
       ${cmd}
     '';
-
-  });
+    meta = old.meta;
+  };
 }
