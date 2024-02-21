@@ -4,9 +4,11 @@ pkgs.mkShell {
     pkgs.rustc
     pkgs.cargo
     pkgs.cargo-watch
+    pkgs.cargo-generate
     pkgs.rust-analyzer
     pkgs.rustfmt
     pkgs.clippy
+    pkgs.wasm-pack
   ];
 
   RUST_BACKTRACE = "1";
