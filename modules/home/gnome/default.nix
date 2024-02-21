@@ -1,4 +1,4 @@
-{ lib, osConfig, pkgs, ... }:
+{ lib, osConfig ? { services.xserver.desktopManager.gnome.enable = false; }, pkgs, ... }:
 
 {
   config = lib.mkIf osConfig.services.xserver.desktopManager.gnome.enable {
@@ -94,7 +94,7 @@
           "obsidian.desktop"
           "torbrowser.desktop"
           "org.gnome.Nautilus.desktop"
-          "vencorddesktop.desktop"
+          "vesktop.desktop"
           "org.gnome.Fractal.desktop"
           "gimp.desktop"
           "org.inkscape.Inkscape.desktop"
