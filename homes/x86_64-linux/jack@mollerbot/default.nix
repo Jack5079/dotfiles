@@ -9,6 +9,7 @@
     pkgs.songrec
     pkgs.helvum
     pkgs.eyedropper
+    pkgs.davinci-resolve
     pkgs.nodePackages_latest.pnpm
     pkgs.androidStudioPackages.canary
     pkgs.audacity
@@ -18,15 +19,17 @@
     pkgs.inkscape
     pkgs.git-absorb
     (pkgs.gimp-with-plugins.override {
-      plugins = [(pkgs.gimpPlugins.resynthesizer.overrideAttrs {
-        src = inputs.resynthesizer-scm;
-        meta.broken = false;
-      })];
+      plugins = [
+        (pkgs.gimpPlugins.resynthesizer.overrideAttrs {
+          src = inputs.resynthesizer-scm;
+          meta.broken = false;
+        })
+      ];
     })
     pkgs.tor-browser
     pkgs.thunderbird
     pkgs.piper
-    pkgs.fractal
+    # pkgs.fractal
     inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
     (pkgs.prismlauncher.override {
       glfw = pkgs.glfw-wayland-minecraft;
