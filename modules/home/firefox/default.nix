@@ -1,4 +1,15 @@
-{ inputs, config, osConfig, lib, pkgs, ... }: {
+{ inputs
+, config
+, osConfig ? {
+    services.xserver.desktopManager = {
+      plasma5.enable = false;
+      gnome.enable = false;
+    };
+  }
+, lib
+, pkgs
+, ...
+}: {
   config = lib.mkIf config.programs.firefox.enable {
     home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
     programs.firefox = {
@@ -22,7 +33,18 @@
           "gnomeTheme.hideSingleTab" = true;
           "gnomeTheme.hideWebrtcIndicator" = true;
         };
-        userChrome = ''@import "firefox-gnome-theme/userChrome.css";'';
+        userChrome = ''
+          @import "firefox-gnome-theme/userChrome.css";
+          html:not([inFullscreen="true"]) #sidebar-box {
+            margin-top: -50px;
+          }
+          #sidebar-header:has(#sidebar-title[value="Sidebery"]) {
+            display: none;
+          }
+          #sidebar-box {
+            z-index: 500;
+          }
+        '';
         userContent = ''@import "firefox-gnome-theme/userContent.css";'';
       };
     };
