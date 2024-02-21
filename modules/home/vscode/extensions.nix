@@ -46,9 +46,7 @@
   rust = with extensions; [
     relm4.relm4-snippets
     pkgs.vscode-extensions.rust-lang.rust-analyzer
-    swellaby.vscode-rust-test-adapter
     tamasfe.even-better-toml
-    kale-lab.salt
   ];
   other = with extensions; [
     amazonwebservices.aws-toolkit-vscode
@@ -57,6 +55,7 @@
     editorconfig.editorconfig
     esbenp.prettier-vscode
     github.remotehub
+    qwtel.sqlite-viewer
     pkgs.vscode-extensions.github.vscode-pull-request-github
     hbenl.vscode-test-explorer
     icrawl.discord-vscode
