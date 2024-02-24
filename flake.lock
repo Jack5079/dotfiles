@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1708735962,
-        "narHash": "sha256-Os8HqSQYuAhkkVf/MGfBVrhyF1rrNhvmucgU1w+3FVA=",
+        "lastModified": 1708777373,
+        "narHash": "sha256-8vRvD+hFaZxVZEAPyESL2j58CrYsnY00B4zm7iGPPek=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "41cafcbaa9147f1088b6eda59fd1ef142b57797b",
+        "rev": "eb9d782f34f231cc8bd71d1ff7dd77c603b7c41a",
         "type": "github"
       },
       "original": {
