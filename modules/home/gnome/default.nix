@@ -224,8 +224,8 @@
               angle = -1;
               children = [
                 { angle = -1; data = { command = "flatpak run --branch=stable --arch=x86_64 --command=workbench --file-forwarding re.sonny.Workbench @@u %U @@"; }; icon = "re.sonny.Workbench"; name = "Workbench"; type = "Command"; }
-                { angle = -1; data = { command = "kgx"; }; icon = "org.gnome.Console"; name = "Console"; type = "Command"; }
-                { angle = -1; data = { command = "kgx hx %F"; }; icon = "helix"; name = "Helix"; type = "Command"; }
+                { angle = -1; data = { command = "alacritty"; }; icon = "alacritty"; name = "Alacritty"; type = "Command"; }
+                { angle = -1; data = { command = "alacritty hx %F"; }; icon = "helix"; name = "Helix"; type = "Command"; }
                 { angle = -1; data = { command = "code %F"; }; icon = "code"; name = "Visual Studio Code"; type = "Command"; }
               ];
               data = { };
