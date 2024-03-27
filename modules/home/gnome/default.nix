@@ -238,7 +238,6 @@
               angle = -1;
               children = [
                 { angle = -1; data = { uri = "https://discord.com/app"; }; icon = "💬️"; name = "Discord"; type = "Uri"; }
-                { angle = -1; data = { uri = "https://owo.community"; }; icon = "😺️"; name = "Misskey"; type = "Uri"; }
                 { angle = -1; data = { uri = "https://wetdry.world"; }; icon = "🐘️"; name = "Mastodon"; type = "Uri"; }
                 { angle = -1; data = { uri = "https://music.youtube.com"; }; icon = "💿️"; name = "YT Music"; type = "Uri"; }
                 { angle = -1; data = { uri = "https://movie-web.app"; }; icon = "📽️"; name = "movie-web"; type = "Uri"; }
