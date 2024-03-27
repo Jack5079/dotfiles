@@ -89,7 +89,7 @@
         favorite-apps = [
           "firefox-nightly.desktop"
           "code.desktop"
-          "org.gnome.Console.desktop"
+          "Alacritty.desktop"
           "thunderbird.desktop"
           "obsidian.desktop"
           "torbrowser.desktop"
