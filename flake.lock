@@ -205,11 +205,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712246315,
-        "narHash": "sha256-VEtVcpvL32T8FoWQ8doVGSVoAsOOH2zn6L9Ox0wOwuo=",
+        "lastModified": 1712358268,
+        "narHash": "sha256-W4GQA8cfcVHeQQjov4DZYPI80QcrTCXtcoyIXv66jus=",
         "ref": "refs/heads/main",
-        "rev": "edd54a85b5e07029c54e098316b623e25858bc7f",
-        "revCount": 28,
+        "rev": "0ad53f6352963c9411910b007852b2c442df2db7",
+        "revCount": 33,
         "type": "git",
         "url": "https://git.catvibers.me/charlie/kittypkgs.git"
       },
