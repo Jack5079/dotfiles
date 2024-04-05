@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712233518,
-        "narHash": "sha256-HLoAQRgBQmFRrajIi5548IXl789eZ7KRRwfiMsZCRG4=",
+        "lastModified": 1712278590,
+        "narHash": "sha256-A0g2aPhTdJ3lEsBQdi5TGwfx5JZE6vhcQy5d1Ojx7eg=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "956f5f24e49e3dd1d8f6a3ae07c81202ba37070f",
+        "rev": "5a847b4cd3bb489158b7aa3ea4f3eabe30e48c56",
         "type": "github"
       },
       "original": {
@@ -183,16 +183,39 @@
         ]
       },
       "locked": {
-        "lastModified": 1712212014,
-        "narHash": "sha256-s+lbaf3nLRn1++/X2eXwY9mYCA/m9l8AvyG8beeOaXE=",
+        "lastModified": 1712266167,
+        "narHash": "sha256-gr2CBgT8t+utDqzWSp2vSjX/c39Q0BNtrWE6/cDhhEE=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "7e91f2a0ba4b62b88591279d54f741a13e36245b",
+        "rev": "0c73c1b8da28a24c4fe842ced3f2548d5828b550",
         "type": "github"
       },
       "original": {
         "id": "home-manager",
         "type": "indirect"
+      }
+    },
+    "kittypkgs": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "snowfall-lib": [
+          "snowfall-lib"
+        ]
+      },
+      "locked": {
+        "lastModified": 1712246315,
+        "narHash": "sha256-VEtVcpvL32T8FoWQ8doVGSVoAsOOH2zn6L9Ox0wOwuo=",
+        "ref": "refs/heads/main",
+        "rev": "edd54a85b5e07029c54e098316b623e25858bc7f",
+        "revCount": 28,
+        "type": "git",
+        "url": "https://git.catvibers.me/charlie/kittypkgs.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.catvibers.me/charlie/kittypkgs.git"
       }
     },
     "lib-aggregate": {
@@ -338,6 +361,7 @@
         "firefox": "firefox",
         "firefox-gnome-theme": "firefox-gnome-theme",
         "home-manager": "home-manager",
+        "kittypkgs": "kittypkgs",
         "nix-index-database": "nix-index-database",
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
