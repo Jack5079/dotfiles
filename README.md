@@ -14,7 +14,6 @@
 * [`devShells.rust`](./packages/skylight-wallpaper/default.nix): Basic Rust devshell for temporary experiments
 * [`packages.skylight-wallpaper`](./packages/skylight-wallpaper/default.nix): The @mollersuite brand wallpaper
 * [`homeConfigurations.jack@mollerbot`](./homes/x86_64-linux/jack@mollerbot/default.nix): My [Home Manager](https://home-manager.dev) configuration
-* [`homeModules.bun`](./modules/home/bun/default.nix): Installs [Bun](https://bun.sh) and [gets its lockfiles working in `git diff`](https://bun.sh/docs/install/lockfile#how-do-i-git-diff-bun-s-lockfile)
 * [`homeModules.firefox`](./modules/home/firefox/default.nix): Configures Firefox with the [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) and allows desktop integrations to work
 * [`homeModules.gnome`](./modules/home/gnome/default.nix): Configures GNOME extensions, favorite apps, and keybindings
 * [`homeModules.vscode`](./modules/home/vscode/default.nix): Visual Studio Code [extensions](./modules/home/vscode/extensions.nix) and [snippets](./modules/home/vscode/snippets.nix)
