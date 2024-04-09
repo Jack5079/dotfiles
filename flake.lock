@@ -183,18 +183,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1712612629,
-        "narHash": "sha256-Dermzq3p/SgWGxUmmzqyJnQsVoKFoRrwtBnkHmjWEmU=",
-        "owner": "jack5079",
+        "lastModified": 1712688495,
+        "narHash": "sha256-NrVLXkpT9ZigiI8md6NIzHS+3lE4QTj30IgXG57O9iM=",
+        "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a52420bc274cbb2731b75680be5c86de824b6813",
+        "rev": "b00d0e4fe9cba0047f54e77418ddda5f17e6ef2c",
         "type": "github"
       },
       "original": {
-        "owner": "jack5079",
-        "ref": "init-bun",
-        "repo": "home-manager",
-        "type": "github"
+        "id": "home-manager",
+        "type": "indirect"
       }
     },
     "kittypkgs": {
