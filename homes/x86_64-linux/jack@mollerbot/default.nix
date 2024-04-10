@@ -9,7 +9,6 @@
     pkgs.songrec
     pkgs.helvum
     pkgs.eyedropper
-    pkgs.davinci-resolve
     pkgs.nodePackages_latest.pnpm
     pkgs.androidStudioPackages.canary
     pkgs.audacity
@@ -33,13 +32,18 @@
     inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
     (pkgs.prismlauncher.override {
       glfw = pkgs.glfw-wayland-minecraft;
+      jdks = [ pkgs.jdk21 ];
     })
-    pkgs.libsForQt5.kdenlive
+    # pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon
+    pkgs.nix-output-monitor
+    pkgs.breeze-icons # for 24.02+ gear apps when i dont have plasma
+    pkgs.superTuxKart
   ];
   programs = {
     nushell = {
       enable = true;
+      package = pkgs.nushellFull;
       shellAliases = {
         switch = "sudo nixos-rebuild switch --fast --print-build-logs";
         nx = "nix develop --command hx";
