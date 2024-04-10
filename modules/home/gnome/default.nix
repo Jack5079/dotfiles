@@ -107,6 +107,7 @@
           "org.prismlauncher.PrismLauncher.desktop"
           "dev.vlinkz.NixSoftwareCenter.desktop"
           "org.gnome.Software.desktop"
+          "surf.tangent.Tangent.desktop"
         ];
         welcome-dialog-last-shown-version = "1000000";
       };
