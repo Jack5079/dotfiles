@@ -32,17 +32,19 @@
           "browser.theme.dark-private-windows" = false;
           "gnomeTheme.hideSingleTab" = true;
           "gnomeTheme.hideWebrtcIndicator" = true;
+          "sidebar.revamp" = true; # Firefox Larch
         };
         userChrome = ''
           @import "firefox-gnome-theme/userChrome.css";
-          html:not([inFullscreen="true"]) #sidebar-box {
+          /* Made redundant by Firefox Larch */
+      /*    html:not([inFullscreen="true"]) #sidebar-box {
             margin-top: -50px;
           }
           #sidebar-header:has(#sidebar-title[value="Sidebery"]) {
             display: none;
-          }
+          } */
           #sidebar-box {
-            z-index: 500;
+            /* z-index: 10; */
           }
         '';
         userContent = ''@import "firefox-gnome-theme/userContent.css";'';
