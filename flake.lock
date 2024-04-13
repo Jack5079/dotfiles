@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712969239,
-        "narHash": "sha256-EtsNSplpkJWc47DGhZD5ZsQr9ubkdUEld/gVi6Hu+T4=",
+        "lastModified": 1713010889,
+        "narHash": "sha256-oIkQhYUNXNMDbnnlnf0/o+LG9jYLGOK2TnvszQBFI+A=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "bd7a378dd8b19d0ec7a0b88b82670b56edb5bc69",
+        "rev": "12c7a3a99df3ad7216fc0abc03db952054ec72e2",
         "type": "github"
       },
       "original": {
@@ -183,11 +183,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712759992,
-        "narHash": "sha256-2APpO3ZW4idlgtlb8hB04u/rmIcKA8O7pYqxF66xbNY=",
+        "lastModified": 1713019815,
+        "narHash": "sha256-jzTo97VeKMNfnKw3xU+uiU5C7wtnLudsbwl/nwPLC7s=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "31357486b0ef6f4e161e002b6893eeb4fafc3ca9",
+        "rev": "8fdf329526f06886b53b94ddf433848a0d142984",
         "type": "github"
       },
       "original": {
@@ -205,11 +205,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712801629,
-        "narHash": "sha256-foc4jr0LGg7J3m6yuujkvhnitItBxIm7ZNi18m+PAY8=",
+        "lastModified": 1713015135,
+        "narHash": "sha256-NLPHqdrO814uhdnUgJ6AwhqfuC7JqVJE+Y4JkFZbhgE=",
         "ref": "refs/heads/main",
-        "rev": "7b7680118049df09d508fa16898fd2b87e17d945",
-        "revCount": 39,
+        "rev": "1ff5ce82d8862df800e1f6a9bd43e91695b8297f",
+        "revCount": 40,
         "type": "git",
         "url": "https://codeberg.org/caffeinatedcharlie/kittypkgs.git"
       },
