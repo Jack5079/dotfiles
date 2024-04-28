@@ -195,29 +195,6 @@
         "type": "indirect"
       }
     },
-    "kittypkgs": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "snowfall-lib": [
-          "snowfall-lib"
-        ]
-      },
-      "locked": {
-        "lastModified": 1713984727,
-        "narHash": "sha256-lOADjpsaoQkraq1Q3UVEiPueRnvZTrbAAH0RDBanE3I=",
-        "ref": "refs/heads/main",
-        "rev": "d3bb8dfccdafa6bd1fea6ed2dddd8953e2746931",
-        "revCount": 46,
-        "type": "git",
-        "url": "https://codeberg.org/caffeinatedcharlie/kittypkgs.git"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://codeberg.org/caffeinatedcharlie/kittypkgs.git"
-      }
-    },
     "lib-aggregate": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -361,7 +338,6 @@
         "firefox": "firefox",
         "firefox-gnome-theme": "firefox-gnome-theme",
         "home-manager": "home-manager",
-        "kittypkgs": "kittypkgs",
         "nix-index-database": "nix-index-database",
         "nix-software-center": "nix-software-center",
         "nixpkgs": "nixpkgs",
