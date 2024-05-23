@@ -1,7 +1,7 @@
 { extensions, pkgs }: builtins.concatLists (builtins.attrValues {
   markdown = with extensions; [
     bierner.markdown-emoji
-    bierner.markdown-mermaid
+    # bierner.markdown-mermaid
     bpruitt-goddard.mermaid-markdown-syntax-highlighting
     davidanson.vscode-markdownlint
     mushan.vscode-paste-image
@@ -24,6 +24,7 @@
     svelte.svelte-vscode
     sysoev.language-stylus
     thisismanta.stylus-supremacy
+    typespec.typespec-vscode
   ];
   gnome = with extensions; [
     bodil.blueprint-gtk
@@ -49,9 +50,9 @@
     tamasfe.even-better-toml
   ];
   other = with extensions; [
-    amazonwebservices.aws-toolkit-vscode
+    supermaven.supermaven
     bierner.emojisense
-    drmerfy.overtype
+    # drmerfy.overtype # some weird bug is happening rn so i'm disabling it
     editorconfig.editorconfig
     esbenp.prettier-vscode
     github.remotehub
@@ -64,7 +65,7 @@
     mikestead.dotenv
     pkgs.vscode-extensions.ms-vscode-remote.remote-ssh
     ms-vscode-remote.remote-ssh-edit
-    ms-vscode.hexeditor
+    pkgs.vscode-extensions.ms-vscode.hexeditor
     ms-vscode.remote-explorer
     ms-vscode.remote-repositories
     ms-vscode.test-adapter-converter

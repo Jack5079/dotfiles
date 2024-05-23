@@ -7,7 +7,6 @@
     };
     excludePackages = [ pkgs.xterm ];
   };
-
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour # I've used GNOME before
     gnome-photos
@@ -20,6 +19,8 @@
     gnome.gnome-music # I use G4Music instead
   ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317
+  environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -35,7 +36,7 @@
     packages = [ pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font pkgs.monaspace pkgs.jetbrains-mono ];
     fontDir.enable = true;
     fontconfig.defaultFonts = {
-      sansSerif = [ "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
+      sansSerif = [ "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" "Noto Color Emoji" ];
       monospace = [ "Monaspace Neon Var" "Monaspace Neon Regular" "DejaVu Sans Mono" ];
     };
   };

@@ -9,30 +9,27 @@
       ./phone.nix
       ./nix.nix
     ];
-  virtualisation.vmVariant =
-    {
-      # following configuration is added only when building VM with build-vm
-      virtualisation = {
-        memorySize = 8192; # Use 2048MiB memory.
-        cores = 12;
-      };
-    };
-  security.hardened = true;
+  # for build-vm
+  virtualisation.vmVariant = {
+    virtualisation.memorySize = 8192;
+    virtualisation.cores = 12;
+  };
+
   networking.hostName = "mollerbot";
   services.udev.packages = [
     pkgs.android-udev-rules
   ];
   home-manager.useUserPackages = true; # "This is necessary if, for example, you wish to use `nixos-rebuild build-vm`" ―https://nix-community.github.io/home-manager/#:~:text=use%20nixos-rebuild-,build-vm,-.%20This%20option%20may
-  home-manager.useGlobalPkgs = true;
+  home-manager.useGlobalPkgs = true; # Now default in Snowfall https://github.com/snowfallorg/lib/commit/6f2e2819df4770b7ab81827e3cb27b738c7c7721 but keeping this here to be explicit
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jack = {
     isNormalUser = true;
     description = "Jack W.";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" ];
     initialHashedPassword = "$y$j9T$08sb4D2lguIDpdoEKxY450$EpQpDMvff04dmk8FqPYMQIu2pqymSGjqDDkqslKtK9D";
-    shell = pkgs.nushell;
+    shell = pkgs.nushellFull;
   };
-  environment.shells = with pkgs; [ nushell ]; # Else PolicyKit breaks
+  environment.shells = with pkgs; [ nushellFull ]; # Else PolicyKit breaks
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

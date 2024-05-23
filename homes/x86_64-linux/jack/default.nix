@@ -10,7 +10,7 @@
     pkgs.helvum
     pkgs.eyedropper
     pkgs.nodePackages_latest.pnpm
-    pkgs.androidStudioPackages.canary
+    #    pkgs.androidStudioPackages.canary # FUCK YOU GOOGLE 10 GB
     pkgs.audacity
     pkgs.whois
     pkgs.gpu-screen-recorder-gtk
@@ -28,13 +28,12 @@
     pkgs.tor-browser
     pkgs.thunderbird
     pkgs.piper
-    # pkgs.fractal
     inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
     (pkgs.prismlauncher.override {
       glfw = pkgs.glfw-wayland-minecraft;
       jdks = [ pkgs.jdk21 ];
     })
-    # pkgs.kdePackages.kdenlive
+    pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon
     pkgs.nix-output-monitor
     pkgs.breeze-icons # for 24.02+ gear apps when i dont have plasma

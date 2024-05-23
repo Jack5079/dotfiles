@@ -95,7 +95,6 @@
           "torbrowser.desktop"
           "org.gnome.Nautilus.desktop"
           "vesktop.desktop"
-          "org.gnome.Fractal.desktop"
           "gimp.desktop"
           "org.inkscape.Inkscape.desktop"
           "org.gnome.design.IconLibrary.desktop"

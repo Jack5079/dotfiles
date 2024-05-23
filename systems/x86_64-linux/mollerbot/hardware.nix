@@ -10,10 +10,9 @@
   boot.initrd.kernelModules = [ ];
   boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ]; # https://github.com/atar-axis/xpadneo/
 
-  # https://www.freedesktop.org/wiki/Software/systemd/Optimizations/
-  # https://wiki.archlinux.org/title/Improving_performance/Boot_process
-  boot.kernelParams = [ "libahci.ignore_sss=1" "quiet" ];
-
+  boot.kernelParams = [
+    "split_lock_detect=off"
+  ];
 
   fileSystems."/" =
     {

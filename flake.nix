@@ -19,11 +19,13 @@
       url = "github:nix-community/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme/nightly"; flake = false; };
     resynthesizer-scm = { url = "github:itr-tert/gimp-resynthesizer-scm"; flake = false; };
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    nix-index-database.url = "github:Mic92/nix-index-database";
-    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs:
