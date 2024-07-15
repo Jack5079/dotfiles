@@ -19,6 +19,7 @@
     gnome.gnome-music # I use G4Music instead
     gnome.gnome-contacts # Don't think I've ever used this
   ];
+  services.gnome.gnome-remote-desktop.enable = false; # I don't use it, and it pulls in freerdp (725 MB)
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
 
