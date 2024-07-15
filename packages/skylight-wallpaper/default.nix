@@ -21,6 +21,6 @@ pkgs.writeTextFile {
   meta = {
     description = "Etcetera's brand wallpaper";
     license = lib.licenses.cc-by-sa-40;
-    platforms = lib.platforms.all;
+    platforms = lib.platforms.unix;
   };
 }
