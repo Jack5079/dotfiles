@@ -14,7 +14,7 @@
     pkgs.audacity
     pkgs.whois
     pkgs.gpu-screen-recorder-gtk
-    pkgs.transmission_4-gtk
+    # pkgs.transmission_4-gtk
     pkgs.inkscape
     pkgs.git-absorb
     (pkgs.gimp-with-plugins.override {
