@@ -42,7 +42,7 @@
   programs = {
     nushell = {
       enable = true;
-      package = pkgs.nushellFull;
+      package = pkgs.nushell;
       shellAliases = {
         switch = "sudo nixos-rebuild switch --fast --print-build-logs";
         nx = "nix develop --command hx";

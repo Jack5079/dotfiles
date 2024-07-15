@@ -27,9 +27,9 @@
     description = "Jack W.";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" ];
     initialHashedPassword = "$y$j9T$08sb4D2lguIDpdoEKxY450$EpQpDMvff04dmk8FqPYMQIu2pqymSGjqDDkqslKtK9D";
-    shell = pkgs.nushellFull;
+    shell = pkgs.nushell;
   };
-  environment.shells = with pkgs; [ nushellFull ]; # Else PolicyKit breaks
+  environment.shells = with pkgs; [ nushell ]; # Else PolicyKit breaks
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
