@@ -12,7 +12,7 @@
       wayland-or-x11
     ] ++ [
       pkgs.adw-gtk3
-      pkgs.gnome.gnome-tweaks
+      pkgs.gnome-tweaks
       pkgs.me.skylight-wallpaper
     ];
 
@@ -81,7 +81,7 @@
           "flypie@schneegans.github.com"
           "switch-x11-wayland@prasanthc41m.github.com"
           "light-style@gnome-shell-extensions.gcampax.github.com"
-          "overviewbackground@github.com.orbitcorrection"
+          # "overviewbackground@github.com.orbitcorrection"
           "just-perfection-desktop@just-perfection"
           "hotedge@jonathan.jdoda.ca"
           "waylandorx11@injcristianrojas.github.com"
@@ -224,8 +224,8 @@
               angle = -1;
               children = [
                 { angle = -1; data = { command = "flatpak run --branch=stable --arch=x86_64 --command=workbench --file-forwarding re.sonny.Workbench @@u %U @@"; }; icon = "re.sonny.Workbench"; name = "Workbench"; type = "Command"; }
-                { angle = -1; data = { command = "alacritty"; }; icon = "alacritty"; name = "Alacritty"; type = "Command"; }
-                { angle = -1; data = { command = "alacritty hx %F"; }; icon = "helix"; name = "Helix"; type = "Command"; }
+                { angle = -1; data = { command = "kgx"; }; icon = "kgx"; name = "GNOME Console"; type = "Command"; } 
+                { angle = -1; data = { command = "kgx hx %F"; }; icon = "helix"; name = "Helix"; type = "Command"; }
                 { angle = -1; data = { command = "code %F"; }; icon = "code"; name = "Visual Studio Code"; type = "Command"; }
               ];
               data = { };
