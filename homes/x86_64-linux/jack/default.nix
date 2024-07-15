@@ -10,6 +10,7 @@
     pkgs.helvum
     pkgs.eyedropper
     pkgs.nodePackages_latest.pnpm
+    pkgs.androidStudioPackages.canary
     pkgs.nodePackages_latest.nodejs
     pkgs.audacity
     pkgs.whois
