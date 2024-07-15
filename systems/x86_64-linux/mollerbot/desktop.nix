@@ -10,13 +10,14 @@
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour # I've used GNOME before
     gnome-photos
-    gnome.simple-scan
-    gnome.gnome-maps # I have a desktop
-    gnome.seahorse
-    gnome.geary
+    simple-scan
+    seahorse
+    geary
     snapshot # I do not have a webcam
     epiphany # Sometimes I uncomment this to test WebKit
+    gnome.gnome-maps # I have a desktop
     gnome.gnome-music # I use G4Music instead
+    gnome.gnome-contacts # Don't think I've ever used this
   ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
