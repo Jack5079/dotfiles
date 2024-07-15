@@ -10,7 +10,7 @@
     pkgs.helvum
     pkgs.eyedropper
     pkgs.nodePackages_latest.pnpm
-    #    pkgs.androidStudioPackages.canary # FUCK YOU GOOGLE 10 GB
+    pkgs.nodePackages_latest.nodejs
     pkgs.audacity
     pkgs.whois
     pkgs.gpu-screen-recorder-gtk
