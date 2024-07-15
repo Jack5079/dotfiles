@@ -49,6 +49,14 @@
     pkgs.vscode-extensions.rust-lang.rust-analyzer
     tamasfe.even-better-toml
   ];
+  java = with extensions; [
+    vscjava.vscode-maven
+    vscjava.vscode-java-debug
+    redhat.java
+    vscjava.vscode-java-dependency
+    fwcd.kotlin
+    vscjava.vscode-gradle
+  ];
   other = with extensions; [
     supermaven.supermaven
     bierner.emojisense
