@@ -9,7 +9,7 @@
  </a>
 </p>
 
-![Fullscreen screenshot of a GNOME desktop. Wallpaper is Unsplash photo "silhouette of mountains during daytime" modified to make the foreground mountain pure black. JPEG artifacts are visible. GNOME's topbar has been moved to the bottom, made slightly smaller, font changed to Inter, and has the power icon removed with an X11 icon added to the right.](./screenshot.png)
+![Fullscreen screenshot of a GNOME desktop. Wallpaper is Unsplash photo "silhouette of mountains during daytime" modified to make the foreground mountain pure black. JPEG artifacts are visible. GNOME's topbar has been moved to the bottom, made slightly smaller, font changed to Inter, and has the power icon removed with a Wayland icon added to the right. Vesktop is also visible in the system tray.](./screenshot.png)
 
 * [`devShells.rust`](./packages/skylight-wallpaper/default.nix): Basic Rust devshell for temporary experiments
 * [`packages.skylight-wallpaper`](./packages/skylight-wallpaper/default.nix): The @mollersuite brand wallpaper
