@@ -43,6 +43,8 @@
     piousdeer.adwaita-theme
     pkief.material-icon-theme
     vscode-icons-team.vscode-icons
+    littensy.charmed-icons # Orca my beloved
+    keksiqc.idx-monospace-theme
   ];
   rust = with extensions; [
     relm4.relm4-snippets
