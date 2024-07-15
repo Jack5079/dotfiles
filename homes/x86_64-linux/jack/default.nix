@@ -1,4 +1,4 @@
-{ inputs, pkgs, config, ... }: {
+{ inputs, pkgs, lib, config, ... }: {
   home.stateVersion = "23.05";
   imports = [
     inputs.nix-index-database.hmModules.nix-index
