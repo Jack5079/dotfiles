@@ -31,8 +31,7 @@
     pkgs.piper
     inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
     (pkgs.prismlauncher.override {
-      glfw = pkgs.glfw-wayland-minecraft;
-      jdks = [ pkgs.jdk21 ];
+      withWaylandGLFW = true;
     })
     pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon
