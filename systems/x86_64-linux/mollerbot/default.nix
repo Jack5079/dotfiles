@@ -8,6 +8,7 @@
       ./network.nix
       ./phone.nix
       ./nix.nix
+      # ./perlless.nix # I will regret this
     ];
   # for build-vm
   virtualisation.vmVariant = {
