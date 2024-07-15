@@ -85,16 +85,6 @@
         };
       };
     };
-    alacritty = {
-      enable = true;
-      settings = {
-        live_config_reload = true;
-        window.dynamic_padding = true;
-        window.resize_increments = true;
-        font.normal = { family = "JetBrains Mono"; style = "Regular"; };
-        font.size = 10;
-      };
-    };
   };
   services.syncthing = {
     enable = true;
