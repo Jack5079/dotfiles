@@ -34,11 +34,11 @@
   };
 
   fonts = {
-    packages = [ pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font pkgs.monaspace pkgs.jetbrains-mono ];
+    packages = [ pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.commit-mono ];
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       sansSerif = [ "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" "Noto Color Emoji" ];
-      monospace = [ "Monaspace Neon Var" "Monaspace Neon Regular" "DejaVu Sans Mono" ];
+      monospace = [ "Commit Mono" "DejaVu Sans Mono" ];
     };
   };
   # Custom fonts in Flatpak applications <https://github.com/NixOS/nixpkgs/issues/119433#issuecomment-1326957279>
