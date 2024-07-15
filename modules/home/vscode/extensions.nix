@@ -46,7 +46,8 @@
   ];
   rust = with extensions; [
     relm4.relm4-snippets
-    pkgs.vscode-extensions.rust-lang.rust-analyzer
+    # pkgs.vscode-extensions.rust-lang.rust-analyzer
+    rust-lang.rust-analyzer
     tamasfe.even-better-toml
   ];
   java = with extensions; [
