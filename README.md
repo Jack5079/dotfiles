@@ -1,7 +1,7 @@
 <h1 align="center">jack.cab/dotfiles</h1>
 
 <p align="center">
- <a href="https://nixos.wiki/wiki/Flakes" target="_blank">
+ <a href="https://wiki.nixos.org/wiki/Flakes" target="_blank">
   <img alt="Nix Flakes Ready" src="https://img.shields.io/static/v1?logo=nixos&logoColor=d8dee9&label=Nix%20Flakes&labelColor=5e81ac&message=Ready&color=d8dee9&style=for-the-badge">
 </a>
  <a href="https://github.com/snowfallorg/lib" target="_blank">
@@ -13,7 +13,7 @@
 
 * [`devShells.rust`](./packages/skylight-wallpaper/default.nix): Basic Rust devshell for temporary experiments
 * [`packages.skylight-wallpaper`](./packages/skylight-wallpaper/default.nix): The @mollersuite brand wallpaper
-* [`homeConfigurations.jack@mollerbot`](./homes/x86_64-linux/jack@mollerbot/default.nix): My [Home Manager](https://home-manager.dev) configuration
+* [`homeConfigurations.jack`](./homes/x86_64-linux/jack/default.nix): My [Home Manager](https://home-manager.dev) configuration
 * [`homeModules.firefox`](./modules/home/firefox/default.nix): Configures Firefox with the [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) and allows desktop integrations to work
 * [`homeModules.gnome`](./modules/home/gnome/default.nix): Configures GNOME extensions, favorite apps, and keybindings
 * [`homeModules.vscode`](./modules/home/vscode/default.nix): Visual Studio Code [extensions](./modules/home/vscode/extensions.nix) and [snippets](./modules/home/vscode/snippets.nix)
