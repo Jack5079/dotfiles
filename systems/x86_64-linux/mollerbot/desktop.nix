@@ -39,6 +39,7 @@
     fontconfig.defaultFonts = {
       sansSerif = [ "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" "Noto Color Emoji" ];
       monospace = [ "Commit Mono" "DejaVu Sans Mono" ];
+      emoji = [ "Noto Color Emoji" ];
     };
   };
   # Custom fonts in Flatpak applications <https://github.com/NixOS/nixpkgs/issues/119433#issuecomment-1326957279>
