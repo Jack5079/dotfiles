@@ -41,7 +41,7 @@
   services.printing.enable = true; # Enable CUPS to print documents.
   services.flatpak.enable = true;
   programs.steam.enable = true;
-  programs.virt-manager.enable = true;
+#  programs.virt-manager.enable = true; # I think this is causing issues
 
   # https://github.com/nix-community/srvos/blob/main/nixos/common/upgrade-diff.nix
   system.activationScripts.diff = {
