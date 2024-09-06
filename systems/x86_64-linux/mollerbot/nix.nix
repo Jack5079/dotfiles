@@ -2,8 +2,6 @@
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
     settings = {
-      # How to update this array later: Go to https://nixos.org/manual/nix/stable/contributing/experimental-features#currently-available-experimental-features
-      # and run `copy(JSON.stringify($$("#currently-available-experimental-features ~ h2").map(h2 => h2.textContent), null, 2).replaceAll(",", ""))`
       experimental-features = [
         "flakes"
         "nix-command"
