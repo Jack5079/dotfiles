@@ -39,7 +39,7 @@
   # NVIDIA
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production; # https://github.com/NixOS/nixpkgs/pull/322963 TRY NOT TO HAVE INSANE DEFAULTS CHALLENGE FAILED INSTANTLY
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production; # New NVIDIA drivers are awful
   #  hardware.nvidia.powerManagement.enable = true; # Enabling this made my PC randomly sleep
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
