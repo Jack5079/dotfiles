@@ -15,9 +15,9 @@
     geary
     snapshot # I do not have a webcam
     epiphany # Sometimes I uncomment this to test WebKit
-    gnome.gnome-maps # I have a desktop
-    gnome.gnome-music # I use G4Music instead
-    gnome.gnome-contacts # Don't think I've ever used this
+    gnome-maps # I have a desktop
+    gnome-music # I use Gapless instead
+    gnome-contacts # Don't think I've ever used this
   ];
   services.gnome.gnome-remote-desktop.enable = false; # I don't use it, and it pulls in freerdp (725 MB)
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317
