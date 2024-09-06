@@ -15,6 +15,7 @@
     geary
     snapshot # I do not have a webcam
     epiphany # Sometimes I uncomment this to test WebKit
+    totem # Broken
     gnome-maps # I have a desktop
     gnome-music # I use Gapless instead
     gnome-contacts # Don't think I've ever used this
