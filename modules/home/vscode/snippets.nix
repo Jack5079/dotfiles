@@ -79,6 +79,17 @@ rec {
         - There can be only 1 per containing block without additional effort
       '';
     };
+    "Super Inter Display" = {
+      prefix = "inter";
+      body = ''
+        @font-face {
+          font-family: "Super Inter Display";
+          src: local("Inter Variable");
+          font-feature-settings: "cv13", "cv11";
+        }
+      '';
+      description = "Etcetera headline font";
+    };
     Shine = {
       prefix = "shine";
       description = "all my diamonds be shining"; # yeat reference!
