@@ -36,9 +36,7 @@
     pkgs.thunderbird
     pkgs.piper
     inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
-    (pkgs.prismlauncher.override {
-      withWaylandGLFW = true;
-    })
+    pkgs.prismlauncher
     pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon
     pkgs.nix-output-monitor
