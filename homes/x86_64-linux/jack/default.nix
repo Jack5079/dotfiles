@@ -22,16 +22,8 @@
     pkgs.gpu-screen-recorder-gtk
     pkgs.showtime
     # pkgs.transmission_4-gtk
-    pkgs.inkscape
     pkgs.git-absorb
-    (pkgs.gimp-with-plugins.override {
-      plugins = [
-        (pkgs.gimpPlugins.resynthesizer.overrideAttrs {
-          src = inputs.resynthesizer-scm;
-          meta.broken = false;
-        })
-      ];
-    })
+    # GIMP and Inkscape intentionally removed: I use the beta versions of both. Re-add when inkscape 1.4 and gimp 3.0 are released.
     pkgs.tor-browser
     pkgs.thunderbird
     pkgs.piper
