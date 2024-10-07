@@ -9,6 +9,7 @@
     pkgs.songrec
     pkgs.helvum
     pkgs.eyedropper
+    pkgs.ffmpeg_7-headless
     pkgs.nodePackages_latest.pnpm
     (pkgs.androidStudioPackages.canary.override {
       libGL = pkgs.symlinkJoin {
@@ -27,7 +28,7 @@
     pkgs.tor-browser
     pkgs.thunderbird
     pkgs.piper
-    inputs.nix-software-center.packages.${pkgs.system}.nix-software-center
+    # inputs.nix-software-center.packages.${pkgs.system}.nix-software-center # I don't seriously use this
     pkgs.prismlauncher
     pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon
@@ -65,6 +66,18 @@
     helix = {
       enable = true;
       defaultEditor = true;
+      ignores = [
+        "!.gitignore"
+        "!.prettierrc"
+        "!.markdownlint.json"
+        "!.gitattributes"
+        "!.github/"
+        "!.vscode/"
+#        "~/.vscode/"
+#        "~/go/"
+        "node_modules/"
+        
+      ];
       settings = {
         theme = "github_dark";
         editor = {
