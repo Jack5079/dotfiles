@@ -20,7 +20,7 @@
     pkgs.audacity
     pkgs.whois
     pkgs.gpu-screen-recorder-gtk
-    pkgs.clapper
+    pkgs.showtime
     # pkgs.transmission_4-gtk
     pkgs.inkscape
     pkgs.git-absorb
