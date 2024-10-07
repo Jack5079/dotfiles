@@ -11,7 +11,6 @@
 , ...
 }: {
   config = lib.mkIf config.programs.firefox.enable {
-    home.file.".mozilla/firefox/default/chrome/firefox-gnome-theme".source = inputs.firefox-gnome-theme;
     programs.firefox = {
       package = inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin.override {
         nativeMessagingHosts = lib.optionals osConfig.services.xserver.desktopManager.gnome.enable [
@@ -26,8 +25,6 @@
         name = "default";
         id = 0;
         settings = {
-          # For Firefox GNOME theme:
-          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "svg.context-properties.content.enabled" = true;
           "browser.theme.dark-private-windows" = false;
           "gnomeTheme.hideSingleTab" = true;
