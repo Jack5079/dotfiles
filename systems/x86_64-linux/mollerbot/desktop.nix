@@ -21,9 +21,14 @@
     gnome-music # I use Gapless instead
     gnome-contacts # Don't think I've ever used this
   ];
+  # Sharing tab of GNOME; I use none of it and it could probably be a security risk
   services.gnome.gnome-remote-desktop.enable = false; # I don't use it, and it pulls in freerdp (725 MB)
   services.gnome.rygel.enable = false; # "Rygel UPnP Mediaserver", 897.7 MiB
   services.gnome.gnome-user-share.enable = false;
+
+  # Casting
+  services.dleyna-renderer.enable = false;
+  services.dleyna-server.enable = false;
 
   services.gnome.gnome-initial-setup.enable = false; # home-manager sets up my desktop
 
