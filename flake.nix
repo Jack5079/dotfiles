@@ -23,7 +23,6 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    resynthesizer-scm = { url = "github:itr-tert/gimp-resynthesizer-scm"; flake = false; };
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
