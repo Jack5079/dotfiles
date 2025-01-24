@@ -10,14 +10,7 @@
     pkgs.helvum
     pkgs.eyedropper
     pkgs.ffmpeg_7-headless
-    pkgs.nodePackages_latest.pnpm
-    (pkgs.androidStudioPackages.canary.override {
-      libGL = pkgs.symlinkJoin {
-        name = "libGL-plus-wayland-because-its-the-only-way-i-can-insert-stuff-into-android-studio";
-        paths = [ pkgs.libGL pkgs.wayland ];
-      };
-    })
-    pkgs.nodePackages_latest.nodejs
+    pkgs.android-studio
     pkgs.audacity
     pkgs.whois
     pkgs.gpu-screen-recorder-gtk
