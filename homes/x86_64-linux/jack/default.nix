@@ -28,7 +28,6 @@
     pkgs.tor-browser
     pkgs.thunderbird
     pkgs.piper
-    # inputs.nix-software-center.packages.${pkgs.system}.nix-software-center # I don't seriously use this
     pkgs.prismlauncher
     pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon

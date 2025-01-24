@@ -7,10 +7,6 @@
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-software-center = {
-      url = "github:snowfallorg/nix-software-center";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
