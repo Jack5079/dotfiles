@@ -13,6 +13,7 @@
     simple-scan
     seahorse
     geary
+    gnome-connections
     snapshot # I do not have a webcam
     epiphany # Sometimes I uncomment this to test WebKit
     totem # Broken
