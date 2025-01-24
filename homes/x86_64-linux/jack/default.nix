@@ -2,7 +2,7 @@
   home.stateVersion = "23.05";
   imports = [
     inputs.nix-index-database.hmModules.nix-index
-    { programs.nix-index-database.comma.enable = true; }
+    { programs.nix-index-database.comma.enable = true; programs.nix-index.enable = false; }
   ];
   home.packages = [
     pkgs.obsidian
