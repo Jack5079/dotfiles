@@ -26,7 +26,6 @@
     pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon
     pkgs.nix-output-monitor
-    pkgs.breeze-icons # for 24.02+ gear apps when i dont have plasma
     pkgs.superTuxKart
   ];
   programs = {
