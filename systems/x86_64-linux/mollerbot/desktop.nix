@@ -46,11 +46,11 @@
   };
 
   fonts = {
-    packages = [ pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.commit-mono ];
+    packages = [ pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.commit-mono pkgs.noto-fonts-color-emoji pkgs.go-font ];
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       sansSerif = [ "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" "Noto Color Emoji" ];
-      monospace = [ "Commit Mono" "DejaVu Sans Mono" ];
+      monospace = [ "Go Mono" "Commit Mono" "DejaVu Sans Mono" ];
       emoji = [ "Noto Color Emoji" ];
     };
   };
