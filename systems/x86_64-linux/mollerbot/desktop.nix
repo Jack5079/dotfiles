@@ -25,6 +25,8 @@
   services.gnome.rygel.enable = false; # "Rygel UPnP Mediaserver", 897.7 MiB
   services.gnome.gnome-user-share.enable = false;
 
+  services.gnome.gnome-initial-setup.enable = false; # home-manager sets up my desktop
+
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
 
