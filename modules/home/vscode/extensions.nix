@@ -63,7 +63,6 @@
   other = with extensions; [
     supermaven.supermaven
     bierner.emojisense
-    # drmerfy.overtype # Hash somehow mismatches and no other extensions does this
     editorconfig.editorconfig
     esbenp.prettier-vscode
     github.remotehub
