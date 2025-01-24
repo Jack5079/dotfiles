@@ -23,6 +23,8 @@
   ];
   services.gnome.gnome-remote-desktop.enable = false; # I don't use it, and it pulls in freerdp (725 MB)
   services.gnome.rygel.enable = false; # "Rygel UPnP Mediaserver", 897.7 MiB
+  services.gnome.gnome-user-share.enable = false;
+
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
 
