@@ -36,7 +36,7 @@
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
