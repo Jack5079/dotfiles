@@ -17,7 +17,8 @@
     pkgs.showtime
     # pkgs.transmission_4-gtk
     pkgs.git-absorb
-    # GIMP and Inkscape intentionally removed: I use the beta versions of both. Re-add when inkscape 1.4 and gimp 3.0 are released.
+    # GIMP intentionally removed: I use the beta version. Re-add when gimp 3.0 is released.
+    pkgs.inkscape
     pkgs.tor-browser
     pkgs.thunderbird
     pkgs.piper
