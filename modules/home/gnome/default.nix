@@ -9,7 +9,6 @@
       just-perfection
       paperwm
       overview-background
-      wayland-or-x11
     ] ++ [
       pkgs.adw-gtk3
       pkgs.gnome-tweaks
@@ -79,12 +78,10 @@
           "gsconnect@andyholmes.github.io"
           "appindicatorsupport@rgcjonas.gmail.com"
           "flypie@schneegans.github.com"
-          "switch-x11-wayland@prasanthc41m.github.com"
           "light-style@gnome-shell-extensions.gcampax.github.com"
           # "overviewbackground@github.com.orbitcorrection"
           "just-perfection-desktop@just-perfection"
           "hotedge@jonathan.jdoda.ca"
-          "waylandorx11@injcristianrojas.github.com"
         ];
         favorite-apps = [
           "firefox-nightly.desktop"
@@ -240,7 +237,6 @@
                 { angle = -1; data = { uri = "https://discord.com/app"; }; icon = "💬️"; name = "Discord"; type = "Uri"; }
                 { angle = -1; data = { uri = "https://wetdry.world"; }; icon = "🐘️"; name = "Mastodon"; type = "Uri"; }
                 { angle = -1; data = { uri = "https://music.youtube.com"; }; icon = "💿️"; name = "YT Music"; type = "Uri"; }
-                { angle = -1; data = { uri = "https://movie-web.app"; }; icon = "📽️"; name = "movie-web"; type = "Uri"; }
               ];
               data = { };
               icon = "web-browser-symbolic";
@@ -252,7 +248,7 @@
           data = { };
           icon = "";
           id = 0;
-          name = "Sween";
+          name = "Menu";
           shortcut = "Launch7";
           showChildLabels = false;
           showLabels = false;
