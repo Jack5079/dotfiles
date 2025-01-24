@@ -36,6 +36,8 @@
         switch = "sudo nixos-rebuild switch --fast --print-build-logs";
         nx = "nix develop --command hx";
         nv = "nix develop --command code";
+        update = "nix flake update --commit-lock-file --flake ~/nix";
+        rs = "nix develop self#rust";
       };
       extraConfig = "$env.config.show_banner = false;";
     };
