@@ -16,6 +16,7 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+    channel.enable = false;
     package = pkgs.nixVersions.latest;
     registry.nixpkgs.flake = inputs.nixpkgs;
     nixPath = [ "nixpkgs=flake:nixpkgs" ];
