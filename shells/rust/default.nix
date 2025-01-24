@@ -8,7 +8,6 @@ pkgs.mkShell {
     pkgs.rust-analyzer
     pkgs.rustfmt
     pkgs.clippy
-    pkgs.wasm-pack
   ];
 
   RUST_BACKTRACE = "1";
