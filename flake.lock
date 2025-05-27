@@ -70,11 +70,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1748222594,
-        "narHash": "sha256-JrKf6k9C6KNkXroRJ7h8DBqncIkl3HZsjohmd2Rvm40=",
+        "lastModified": 1748308899,
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "034a61012a650d474b9a256160f435756272379f",
+        "rev": "81d64f5def452b729cb2f693ead46243becc99f5",
         "type": "github"
       },
       "original": {
@@ -260,7 +259,6 @@
     "glfw-fork": {
       "locked": {
         "lastModified": 1738415455,
-        "narHash": "sha256-Tf9q2SprvqmIRTHbTivQxjjZgjF8zTljQiEL7eYJLdo=",
         "owner": "Piecuuu",
         "repo": "nixpkgs",
         "rev": "97e374742ecc9ee877a9d558402602677f7314a4",
@@ -280,11 +278,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1748225779,
-        "narHash": "sha256-ygt7dGP82dBBt0ktFtO3rezdLrjYNw9M63zdzK2Dxw0=",
+        "lastModified": 1748227609,
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a45222c731d61b259d267346e8e098b320f4c681",
+        "rev": "d23d20f55d49d8818ac1f1b2783671e8a6725022",
         "type": "github"
       },
       "original": {
@@ -341,7 +338,6 @@
       },
       "locked": {
         "lastModified": 1748145500,
-        "narHash": "sha256-t9fx0l61WOxtWxXCqlXPWSuG/0XMF9DtE2T7KXgMqJw=",
         "owner": "Mic92",
         "repo": "nix-index-database",
         "rev": "a98adbf54d663395df0b9929f6481d4d80fc8927",
@@ -432,11 +428,10 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1748026106,
-        "narHash": "sha256-6m1Y3/4pVw1RWTsrkAK2VMYSzG4MMIj7sqUy7o8th1o=",
+        "lastModified": 1748190013,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "063f43f2dbdef86376cc29ad646c45c46e93234c",
+        "rev": "62b852f6c6742134ade1abdd2a21685fd617a291",
         "type": "github"
       },
       "original": {
@@ -468,7 +463,6 @@
       },
       "locked": {
         "lastModified": 1736130495,
-        "narHash": "sha256-4i9nAJEZFv7vZMmrE0YG55I3Ggrtfo5/T07JEpEZ/RM=",
         "owner": "snowfallorg",
         "repo": "lib",
         "rev": "02d941739f98a09e81f3d2d9b3ab08918958beac",
@@ -534,7 +528,6 @@
       },
       "locked": {
         "lastModified": 1748225039,
-        "narHash": "sha256-Lvl26mCEatC5akRHywuXkYM6ZKc7R5T9m6u7rBPtNQw=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
         "rev": "cde730cb9dc2759104d7c8c27cb36d73189be1e2",
