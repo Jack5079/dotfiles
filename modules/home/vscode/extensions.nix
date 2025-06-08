@@ -16,7 +16,9 @@
     ecmel.vscode-html-css
     firefox-devtools.vscode-firefox-debug
     fivethree.vscode-svelte-snippets
+    yoavbls.pretty-ts-errors
     marko-js.marko-vscode
+    # angusmorton.polar-vscode
     ms-playwright.playwright
     ms-vscode.live-server
     orta.vscode-twoslash-queries
@@ -31,17 +33,16 @@
     nico-castell.linux-desktop-file
   ];
   roblox = with extensions; [
-    evaera.vscode-rojo
+    # evaera.vscode-rojo
     koihik.vscode-lua-format
-    nightrains.robloxlsp
-    roblox-ts.vscode-roblox-ts
+    # nightrains.robloxlsp
+    # roblox-ts.vscode-roblox-ts
   ];
   themes = with extensions; [
     github.github-vscode-theme
     johnpapa.vscode-peacock
     kde.breeze
     piousdeer.adwaita-theme
-    pkief.material-icon-theme
     vscode-icons-team.vscode-icons
     littensy.charmed-icons # Orca my beloved
     keksiqc.idx-monospace-theme
@@ -57,11 +58,23 @@
     vscjava.vscode-java-debug
     redhat.java
     vscjava.vscode-java-dependency
-    fwcd.kotlin
     vscjava.vscode-gradle
   ];
+  # dotnet = with extensions; [
+  #   ionide.ionide-fsharp
+  #   ms-dotnettools.csharp
+  # ];
+  minecraft = with extensions; [
+    jackmacwindows.vscode-computercraft
+    sumneko.lua
+    object-object.hex-casting
+  ];
   other = with extensions; [
-    supermaven.supermaven
+    swiftlang.swift-vscode
+    # supermaven.supermaven
+    jakebecker.elixir-ls
+    pkgs.vscode-extensions.github.copilot
+    pkgs.vscode-extensions.github.copilot-chat
     bierner.emojisense
     editorconfig.editorconfig
     esbenp.prettier-vscode
@@ -71,7 +84,7 @@
     hbenl.vscode-test-explorer
     icrawl.discord-vscode
     jnoortheen.nix-ide
-    mhutchie.git-graph
+    mhutchie.git-graph # Nonfree, similar functionality now built into Code
     mikestead.dotenv
     pkgs.vscode-extensions.ms-vscode-remote.remote-ssh
     ms-vscode-remote.remote-ssh-edit
@@ -86,7 +99,7 @@
     thenuprojectcontributors.vscode-nushell-lang
     ultram4rine.vscode-choosealicense
     usernamehw.errorlens
-    pkgs.vscode-extensions.vadimcn.vscode-lldb
+    # pkgs.vscode-extensions.vadimcn.vscode-lldb # my pc is trying to build lldb
     visualstudioexptteam.intellicode-api-usage-examples
     visualstudioexptteam.vscodeintellicode
     vivaxy.vscode-conventional-commits

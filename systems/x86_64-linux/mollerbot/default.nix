@@ -26,7 +26,7 @@
   users.users.jack = {
     isNormalUser = true;
     description = "Jack W.";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" "kvm" ];
     initialHashedPassword = "$y$j9T$08sb4D2lguIDpdoEKxY450$EpQpDMvff04dmk8FqPYMQIu2pqymSGjqDDkqslKtK9D";
     shell = pkgs.nushell;
   };
@@ -38,10 +38,17 @@
   boot.supportedFilesystems = [ "ntfs" ]; # When I need to access my Windows partition
   boot.initrd.systemd.enable = true;
 
-  services.printing.enable = true; # Enable CUPS to print documents.
+  services.printing.enable = false; # Enable CUPS to print documents.
+
+  boot.enableContainers = false;
+  # The notion of "online" is a broken concept
+  # https://github.com/systemd/systemd/blob/e1b45a756f71deac8c1aa9a008bd0dab47f64777/NEWS#L13
+  systemd.services.NetworkManager-wait-online.enable = false;
+  systemd.network.wait-online.enable = false;
+
   services.flatpak.enable = true;
   programs.steam.enable = true;
-#  programs.virt-manager.enable = true; # I think this is causing issues
+   programs.virt-manager.enable = true; # I think this is causing issues
 
   # https://github.com/nix-community/srvos/blob/main/nixos/common/upgrade-diff.nix
   system.activationScripts.diff = {

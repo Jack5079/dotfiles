@@ -2,13 +2,13 @@
   description = "mollerbot";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     snowfall-lib = {
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "home-manager";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     firefox = {
@@ -19,7 +19,18 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # https://github.com/NixOS/nixpkgs/pull/378543
+    glfw-fork = {
+      url = "github:Piecuuu/nixpkgs/glfw-minecraft-fix";
+    };
+    # LAZY TREES LAZY TREES LAZY TREES
+    determinate = {
+      url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+    };
   };
 
   outputs = inputs:
@@ -29,6 +40,6 @@
       namespace = "me";
       package-namespace = "me";
       snowfall.namespace = "me";
-      src = ./.;
+      src = builtins.path { path = ./.; name = "dotfiles"; };
     };
 }

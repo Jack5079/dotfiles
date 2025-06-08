@@ -10,9 +10,12 @@
     programs.vscode = {
       # https://github.com/nix-community/home-manager/issues/4394#issuecomment-1712909231
       mutableExtensionsDir = false;
-      languageSnippets = import ./snippets.nix;
-      extensions = pkgs.callPackage ./extensions.nix {
-        extensions = (inputs.vscode-extensions.extensions.${pkgs.system}.forVSCodeVersion pkgs.vscode.version).vscode-marketplace;
+      profiles.default = {
+        languageSnippets = import ./snippets.nix;
+        extensions = pkgs.callPackage ./extensions.nix {
+          # https://github.com/nix-community/nix-vscode-extensions/issues/99
+          extensions = (inputs.vscode-extensions.overlays.default pkgs pkgs).vscode-marketplace;
+        };
       };
     };
   };

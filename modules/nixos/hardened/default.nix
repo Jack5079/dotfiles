@@ -27,9 +27,9 @@
       "git.sr.ht".hostNames = [ "git.sr.ht" ];
       "git.sr.ht".publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZvRd4EtM7R+IHVMWmDkVU3VLQTSwQDSAvW0t2Tkj60";
     };
-  }
-  // lib.mkIf config.programs.virt-manager.enable {
-    # https://github.com/NixOS/nixpkgs/issues/223594#issuecomment-1527956398
-    boot.kernelModules = [ "kvm-amd" "evdev" "nf" "nf_nat" "nft_chain_nat" "nf_ct" "xt_conntrack" "nf_conntrack" "xt_CHECKSUM" "xt_MASQUERADE" "ipt_REJECT" "nf_reject_ipv4" "snd_hnd_core" "snd" "udp_diag" "edac_mce_amd" "edac_core" "syscopyarea" "ip6_tables" "vhost" "vhost_net" "vhost_iotlb" "xhci_pci" ];
   };
+  # // lib.mkIf config.programs.virt-manager.enable {
+  #   # https://github.com/NixOS/nixpkgs/issues/223594#issuecomment-1527956398
+  #   boot.kernelModules = [ "kvm-amd" "evdev" "nf" "nf_nat" "nft_chain_nat" "nf_ct" "xt_conntrack" "nf_conntrack" "xt_CHECKSUM" "xt_MASQUERADE" "ipt_REJECT" "nf_reject_ipv4" "snd_hnd_core" "snd" "udp_diag" "edac_mce_amd" "edac_core" "syscopyarea" "ip6_tables" "vhost" "vhost_net" "vhost_iotlb" "xhci_pci" ];
+  # };
 }

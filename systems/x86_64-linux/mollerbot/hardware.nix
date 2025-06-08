@@ -5,10 +5,10 @@
     [
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
-  boot.kernelPackages = pkgs.linuxPackages_latest; # "the hardened patches frequently lag behind the upstream kernel." https://github.com/NixOS/nixpkgs/blob/f7edf57b886d3f0f52a224f993bce1d0cb740232/pkgs/top-level/aliases.nix#L497
+  #  boot.kernelPackages = pkgs.linuxPackages_latest; # "the hardened patches frequently lag behind the upstream kernel." https://github.com/NixOS/nixpkgs/blob/f7edf57b886d3f0f52a224f993bce1d0cb740232/pkgs/top-level/aliases.nix#L497
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ]; # https://github.com/atar-axis/xpadneo/
+  #  boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ]; # https://github.com/atar-axis/xpadneo/
 
   boot.kernelParams = [
     "split_lock_detect=off"
@@ -39,8 +39,8 @@
   # NVIDIA
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia.open = false;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production; # New NVIDIA drivers are awful
-  #  hardware.nvidia.powerManagement.enable = true; # Enabling this made my PC randomly sleep
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

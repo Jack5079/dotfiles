@@ -99,11 +99,6 @@ rec {
           mask: linear-gradient(135deg, rgba(0,0,0,.5) 40%, black, rgba(0,0,0,.5) 60%) 100% 100% / 240% 240%;
           animation: shine 2s infinite;
           animation-fill-mode: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 1ch;
-          flex-direction: row;
         }
         @keyframes shine {
           from {

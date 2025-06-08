@@ -1,7 +1,7 @@
-{ lib, osConfig ? { services.xserver.desktopManager.gnome.enable = false; }, pkgs, ... }:
+{ lib, osConfig ? { services.desktopManager.gnome.enable = false; }, pkgs, ... }:
 
 {
-  config = lib.mkIf osConfig.services.xserver.desktopManager.gnome.enable {
+  config = lib.mkIf osConfig.services.desktopManager.gnome.enable {
     # GSConnect was installed in systems/x84_64-linux/mollerbot/phone.nix when I set programs.kdeconnect.package
     home.packages = with pkgs.gnomeExtensions; [
       appindicator
@@ -86,7 +86,7 @@
         favorite-apps = [
           "firefox-nightly.desktop"
           "code.desktop"
-          "org.gnome.Console.desktop"
+          "com.mitchellh.ghostty.desktop"
           "thunderbird.desktop"
           "obsidian.desktop"
           "torbrowser.desktop"
@@ -221,8 +221,8 @@
               angle = -1;
               children = [
                 { angle = -1; data = { command = "flatpak run --branch=stable --arch=x86_64 --command=workbench --file-forwarding re.sonny.Workbench @@u %U @@"; }; icon = "re.sonny.Workbench"; name = "Workbench"; type = "Command"; }
-                { angle = -1; data = { command = "kgx"; }; icon = "kgx"; name = "GNOME Console"; type = "Command"; } 
-                { angle = -1; data = { command = "kgx hx %F"; }; icon = "helix"; name = "Helix"; type = "Command"; }
+                { angle = -1; data = { command = "ghostty"; }; icon = "ghostty"; name = "Ghostty"; type = "Command"; } 
+                { angle = -1; data = { command = "ghostty hx %F"; }; icon = "helix"; name = "Helix"; type = "Command"; }
                 { angle = -1; data = { command = "code %F"; }; icon = "code"; name = "Visual Studio Code"; type = "Command"; }
               ];
               data = { };

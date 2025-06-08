@@ -1,8 +1,8 @@
 { inputs
 , config
 , osConfig ? {
-    services.xserver.desktopManager = {
-      plasma5.enable = false;
+    services.desktopManager = {
+      plasma6.enable = false;
       gnome.enable = false;
     };
   }
@@ -13,11 +13,11 @@
   config = lib.mkIf config.programs.firefox.enable {
     programs.firefox = {
       package = inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin.override {
-        nativeMessagingHosts = lib.optionals osConfig.services.xserver.desktopManager.gnome.enable [
+        nativeMessagingHosts = lib.optionals osConfig.services.desktopManager.gnome.enable [
           pkgs.gnomeExtensions.gsconnect
           pkgs.gnome-browser-connector
-        ] ++ lib.optionals osConfig.services.xserver.desktopManager.plasma5.enable [
-          pkgs.plasma5Packages.plasma-browser-integration
+        ] ++ lib.optionals osConfig.services.desktopManager.plasma6.enable [
+          pkgs.plasma6Packages.plasma-browser-integration
         ];
       };
       profiles.default = {

@@ -12,7 +12,7 @@
     pkgs.ffmpeg_7-headless
     pkgs.android-studio
     pkgs.audacity
-    pkgs.whois
+    pkgs.rdap
     pkgs.gpu-screen-recorder-gtk
     pkgs.showtime
     # pkgs.transmission_4-gtk
@@ -22,13 +22,22 @@
     pkgs.tor-browser
     pkgs.thunderbird
     pkgs.piper
-    pkgs.prismlauncher
+    (pkgs.prismlauncher.override {
+      glfw3-minecraft = inputs.glfw-fork.legacyPackages.${pkgs.system}.glfw3-minecraft;
+    })
     pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon
     pkgs.nix-output-monitor
     pkgs.superTuxKart
   ];
   programs = {
+    ghostty = {
+      enable = true;
+      settings = {
+        theme = "dark:Adwaita Dark,light:Adwaita";
+        font-size = 10;
+      };
+    };
     nushell = {
       enable = true;
       package = pkgs.nushell;
@@ -49,12 +58,14 @@
       enable = true;
       userName = "Jack W.";
       userEmail = "git@jack.cab";
+      signing = {
+        format = "ssh";
+        signByDefault = true;
+      };
       extraConfig = {
         core.editor = "code --wait";
         init.defaultBranch = "main";
-        commit.gpgsign = true;
         user.signingkey = "~/.ssh/id_ed25519.pub";
-        gpg.format = "ssh";
       };
     };
     helix = {
@@ -67,10 +78,10 @@
         "!.gitattributes"
         "!.github/"
         "!.vscode/"
-#        "~/.vscode/"
-#        "~/go/"
+        #        "~/.vscode/"
+        #        "~/go/"
         "node_modules/"
-        
+
       ];
       settings = {
         theme = "github_dark";
