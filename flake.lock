@@ -70,10 +70,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1749386076,
+        "lastModified": 1749424716,
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "7c0c9ad0dbc4c00380983c416be5e9abfd4ccbe7",
+        "rev": "4d44eee8a07a515434083f264002119e75330e8a",
         "type": "github"
       },
       "original": {
