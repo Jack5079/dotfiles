@@ -70,10 +70,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1749486381,
+        "lastModified": 1749565215,
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "9b7ee86a2770cc4229e697a827bbc595086346a7",
+        "rev": "0addf9b5249f6183f3193aff337cd3961b4cf57d",
         "type": "github"
       },
       "original": {
@@ -278,10 +278,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1749483884,
+        "lastModified": 1749526396,
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "74d196c9943a67908d1883f61154e594d03863e5",
+        "rev": "427c96044f11a5da50faf6adaf38c9fa47e6d044",
         "type": "github"
       },
       "original": {
@@ -527,10 +527,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1749434933,
+        "lastModified": 1749521131,
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "cad31acd5498943c472f21795b27550df647f00b",
+        "rev": "299b2aa650d32310153746135b6a84a6c4de9c21",
         "type": "github"
       },
       "original": {
