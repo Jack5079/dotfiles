@@ -1,7 +1,7 @@
-{ lib, osConfig ? { services.desktopManager.gnome.enable = false; }, pkgs, ... }:
+{ lib, osConfig ? { services.desktopManager.gnome.enable = false; }, pkgs, system, ... }:
 
 {
-  config = lib.mkIf osConfig.services.desktopManager.gnome.enable {
+  config = lib.mkIf (lib.snowfall.system.is-linux system && osConfig.services.desktopManager.gnome.enable) {
     # GSConnect was installed in systems/x84_64-linux/mollerbot/phone.nix when I set programs.kdeconnect.package
     home.packages = with pkgs.gnomeExtensions; [
       appindicator
