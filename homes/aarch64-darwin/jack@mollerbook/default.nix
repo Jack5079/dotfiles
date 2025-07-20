@@ -1,11 +1,19 @@
-{ inputs, pkgs, lib, config, ... }: {
+{ inputs, pkgs, lib, config, ... }: let
+  expireScript = pkgs.writeShellApplication {
+    name = "expire-hm-profiles-script";
+    text = ''
+      ${lib.getExe config.nix.package} profile wipe-history \
+        --profile "${config.xdg.stateHome}/nix/profiles/home-manager" \
+        --older-than '7d'
+    '';
+  };
+in {
   home.stateVersion = "23.05";
   imports = [
     inputs.nix-index-database.hmModules.nix-index
     { programs.nix-index-database.comma.enable = true; programs.nix-index.enable = false; }
   ];
-
-  home.packages = [pkgs.nil];
+  home.packages = [pkgs.nil pkgs.nixpkgs-fmt];
   programs.ghostty = {
     enable = true;
     package = null;
@@ -31,5 +39,17 @@
     path add "/run/current-system/sw/bin"
     path add ($env.HOME | path join ".nix-profile/bin")
     '';
+  };
+launchd.agents.expire-hm-profiles = {
+    enable = true;
+    config = {
+      ProgramArguments = [ (lib.getExe expireScript) ];
+      StartCalendarInterval = {
+        Hour = 12;
+        Minute = 0;
+      };
+      StandardErrorPath = "${config.xdg.dataHome}/expire-hm-profiles.err.log";
+      StandardOutPath = "${config.xdg.dataHome}/expire-hm-profiles.out.log";
+    };
   };
 }
