@@ -3,8 +3,9 @@
     enable = true;
     excludePackages = [ pkgs.xterm ];
   };
-  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = true; # ????
   services.desktopManager.gnome.enable = true;
+  # services.desktopManager.plasma6.enable = true;
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour # I've used GNOME before
     gnome-photos
@@ -44,14 +45,15 @@
   };
 
   fonts = {
-    packages = [ pkgs.adwaita-fonts pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.commit-mono pkgs.noto-fonts-color-emoji pkgs.noto-fonts-monochrome-emoji pkgs.go-font ];
+    packages = [ pkgs.adwaita-fonts pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.commit-mono pkgs.noto-fonts-color-emoji pkgs.noto-fonts-monochrome-emoji pkgs.go-font pkgs.noto-fonts];
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       # Half of these sans serif fonts are cargo culted
-      sansSerif = [ "Adwaita Sans Regular" "Adwaita Sans" "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" "Noto Color Emoji" ];
+      sansSerif = [ "Adwaita Sans Regular" "Adwaita Sans" "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "Noto Sans" "DejaVu Sans" "Noto Color Emoji" ];
       monospace = [ "Adwaita Mono" "Go Mono" "Commit Mono" "DejaVu Sans Mono" ];
       emoji = [ "Noto Color Emoji" "Noto Emoji" ];
     };
+    fontconfig.useEmbeddedBitmaps = true;
   };
   # Custom fonts in Flatpak applications <https://github.com/NixOS/nixpkgs/issues/119433#issuecomment-1326957279>
   system.fsPackages = [ pkgs.bindfs ];
