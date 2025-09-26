@@ -1,5 +1,6 @@
-{ pkgs, lib, inputs, config, ... }: {
+{ pkgs, lib, config, ... }: {
   system.stateVersion = 6;
+  networking.hostName = "mollerbook";
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
     settings = {
@@ -7,8 +8,6 @@
         "flakes"
         "nix-command"
       ];
-      use-xdg-base-directories = false; # Some bug makes $PATH not update to the new directories so for now I'm disabling this
-      # lazy-trees = true; # LAZY TREES LAZY TREES LAZY TREES
       log-lines = 10000000;
     };
     optimise.automatic = true;
@@ -18,9 +17,6 @@
       options = "--delete-older-than 1d";
     };
     channel.enable = false;
-    # package = pkgs.nixVersions.latest; # LAZY TREES LAZY TREES LAZY TREES
-    registry.nixpkgs.flake = inputs.nixpkgs;
-    nixPath = [ "nixpkgs=flake:nixpkgs" ];
   };
 system.activationScripts.diff = {
     supportsDryActivation = true;
