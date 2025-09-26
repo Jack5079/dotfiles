@@ -17,7 +17,7 @@
           pkgs.gnomeExtensions.gsconnect
           pkgs.gnome-browser-connector
         ] ++ lib.optionals osConfig.services.desktopManager.plasma6.enable [
-          pkgs.plasma6Packages.plasma-browser-integration
+#          pkgs.plasma6Packages.plasma-browser-integration
         ];
       };
       profiles.default = {

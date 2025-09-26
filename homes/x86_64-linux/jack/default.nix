@@ -1,7 +1,7 @@
 { inputs, pkgs, lib, config, ... }: {
   home.stateVersion = "23.05";
   imports = [
-    inputs.nix-index-database.hmModules.nix-index
+    inputs.nix-index-database.homeModules.nix-index
     { programs.nix-index-database.comma.enable = true; programs.nix-index.enable = false; }
   ];
   home.packages = [
@@ -24,11 +24,15 @@
     pkgs.piper
     (pkgs.prismlauncher.override {
       glfw3-minecraft = inputs.glfw-fork.legacyPackages.${pkgs.system}.glfw3-minecraft;
+      jdks = [pkgs.jdk21];
     })
     pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon
     pkgs.nix-output-monitor
     pkgs.superTuxKart
+    pkgs.signal-desktop
+    pkgs.kdePackages.oxygen
+    pkgs.kdePackages.oxygen-sounds
   ];
   programs = {
     ghostty = {
@@ -48,7 +52,15 @@
         update = "nix flake update --commit-lock-file --flake ~/nix";
         rs = "nix develop self#rust";
       };
-      extraConfig = "$env.config.show_banner = false;";
+      extraConfig = /* nu */ ''
+        $env.config.show_banner = false;
+        def datauri [file: path] {
+          $"data:((ls $file -m).type.0);base64,(open -r $file | encode base64 --nopad)"
+      }
+      '' + lib.concatMapStringsSep "\n"
+        (command:
+          builtins.readFile "${pkgs.nu_scripts}/share/nu_scripts/custom-completions/${command}/${command}-completions.nu"
+        ) [ "git" "cargo" "curl" ];
     };
     bun.enable = true;
     obs-studio.enable = true;

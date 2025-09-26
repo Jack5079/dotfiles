@@ -18,7 +18,6 @@
     fivethree.vscode-svelte-snippets
     yoavbls.pretty-ts-errors
     marko-js.marko-vscode
-    # angusmorton.polar-vscode
     ms-playwright.playwright
     ms-vscode.live-server
     orta.vscode-twoslash-queries
@@ -52,6 +51,7 @@
     # pkgs.vscode-extensions.rust-lang.rust-analyzer
     rust-lang.rust-analyzer
     tamasfe.even-better-toml
+    rust10x.rust10x
   ];
   java = with extensions; [
     vscjava.vscode-maven
@@ -87,7 +87,7 @@
     mhutchie.git-graph # Nonfree, similar functionality now built into Code
     mikestead.dotenv
     pkgs.vscode-extensions.ms-vscode-remote.remote-ssh
-    ms-vscode-remote.remote-ssh-edit
+    pkgs.vscode-extensions.ms-vscode-remote.remote-ssh-edit
     pkgs.vscode-extensions.ms-vscode.hexeditor
     ms-vscode.remote-explorer
     ms-vscode.remote-repositories
@@ -104,5 +104,6 @@
     visualstudioexptteam.vscodeintellicode
     vivaxy.vscode-conventional-commits
     ziglang.vscode-zig
+    # typefox.open-collaboration-tools
   ];
 })
