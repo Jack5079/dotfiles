@@ -2,7 +2,7 @@
   description = "mollerbot";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     darwin = {
       url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,9 +28,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # https://github.com/NixOS/nixpkgs/pull/378543
-    glfw-fork = {
-      url = "github:Piecuuu/nixpkgs/glfw-minecraft-fix";
-    };
+    # glfw-fork = {
+    #   url = "github:Piecuuu/nixpkgs/glfw-minecraft-fix";
+    # };
     # LAZY TREES LAZY TREES LAZY TREES
    # determinate = {
       
