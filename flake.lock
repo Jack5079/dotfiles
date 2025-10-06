@@ -146,6 +146,22 @@
         "type": "github"
       }
     },
+    "glfw-fork": {
+      "locked": {
+        "lastModified": 1756727112,
+        "narHash": "sha256-lrlFwm+btCqziPn/0zxOobuwFFsqPv0au2uVfiodNBc=",
+        "owner": "Piecuuu",
+        "repo": "nixpkgs",
+        "rev": "c0f4ea6b94dc44fe2002cb9bf7ad45064968a6c7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Piecuuu",
+        "ref": "glfw-minecraft-fix",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -240,6 +256,7 @@
       "inputs": {
         "darwin": "darwin",
         "firefox": "firefox",
+        "glfw-fork": "glfw-fork",
         "home-manager": "home-manager",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs",

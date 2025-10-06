@@ -89,7 +89,7 @@
     pkgs.vscode-extensions.ms-vscode-remote.remote-ssh-edit
     pkgs.vscode-extensions.ms-vscode.hexeditor
     ms-vscode.remote-explorer
-    ms-vscode.remote-repositories
+    # ms-vscode.remote-repositories
     ms-vscode.test-adapter-converter
     ms-vsliveshare.vsliveshare
     redhat.vscode-xml
