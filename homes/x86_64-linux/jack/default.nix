@@ -24,7 +24,7 @@
     pkgs.piper
     (pkgs.prismlauncher.override {
       glfw3-minecraft = inputs.glfw-fork.legacyPackages.${pkgs.system}.glfw3-minecraft;
-      jdks = [pkgs.jdk21];
+      # jdks = [pkgs.jdk21];
     })
     pkgs.kdePackages.kdenlive
     pkgs.me.vesktop-with-sane-icon

@@ -32,9 +32,10 @@
       url = "github:Piecuuu/nixpkgs/glfw-minecraft-fix";
     };
     # LAZY TREES LAZY TREES LAZY TREES
-    determinate = {
-      url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
-    };
+   # determinate = {
+      
+   #   url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+   # };
   };
 
   outputs = inputs:
