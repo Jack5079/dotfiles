@@ -23,7 +23,7 @@
     supportsDryActivation = true;
     text = ''
       if [[ -e /run/current-system ]]; then
-        ${lib.getExe pkgs.nvd} --nix-bin-dir=${config.nix.package}/bin diff /run/current-system "$systemConfig"
+        ${lib.getExe pkgs.lix-diff} --lix-bin=${config.nix.package}/bin diff /run/current-system "$systemConfig"
       fi
     '';
   };
