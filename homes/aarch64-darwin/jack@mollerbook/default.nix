@@ -2,7 +2,7 @@
 {
   home.stateVersion = "23.05";
   imports = [
-    inputs.nix-index-database.hmModules.nix-index
+    inputs.nix-index-database.homeModules.nix-index
     { programs.nix-index-database.comma.enable = true; programs.nix-index.enable = false; }
   ];
   home.packages = [ pkgs.nil pkgs.nixpkgs-fmt ];
