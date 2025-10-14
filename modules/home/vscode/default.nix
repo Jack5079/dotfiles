@@ -14,7 +14,7 @@
         languageSnippets = import ./snippets.nix;
         extensions = pkgs.callPackage ./extensions.nix {
           # https://github.com/nix-community/nix-vscode-extensions/issues/99
-          extensions = (inputs.vscode-extensions.overlays.default pkgs pkgs).vscode-marketplace;
+          extensions = (inputs.vscode-extensions.overlays.default pkgs pkgs).vscode-marketplace // (inputs.vscode-extensions.overlays.default pkgs pkgs).vscode-marketplace-release // pkgs.vscode-extensions;
         };
       };
     };

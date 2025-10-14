@@ -16,9 +16,10 @@
       automatic = true;
       options = "--delete-older-than 1d";
     };
+    package = pkgs.lix;
     channel.enable = false;
   };
-system.activationScripts.diff = {
+  system.activationScripts.diff = {
     supportsDryActivation = true;
     text = ''
       if [[ -e /run/current-system ]]; then

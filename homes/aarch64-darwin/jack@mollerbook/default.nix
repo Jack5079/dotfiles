@@ -46,6 +46,7 @@
         update = "nix flake update --commit-lock-file --flake ~/dotfiles";
         rs = "nix develop self#rust";
         whichnix = "nix build --no-link --print-out-paths";
+        fg = "job unfreeze";
       };
       extraConfig =
         ''

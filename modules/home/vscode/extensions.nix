@@ -38,7 +38,7 @@
     # roblox-ts.vscode-roblox-ts
   ];
   themes = with extensions; [
-    github.github-vscode-theme
+    # github.github-vscode-theme
     johnpapa.vscode-peacock
     kde.breeze
     piousdeer.adwaita-theme
@@ -72,13 +72,12 @@
   other = with extensions; [
     swiftlang.swift-vscode
     # supermaven.supermaven
-    jakebecker.elixir-ls
-    pkgs.vscode-extensions.github.copilot
-    pkgs.vscode-extensions.github.copilot-chat
+    /*pkgs.vscode-extensions.*/github.copilot
+    /*pkgs.vscode-extensions.*/github.copilot-chat
     bierner.emojisense
     editorconfig.editorconfig
     esbenp.prettier-vscode
-    github.remotehub
+    # github.remotehub
     qwtel.sqlite-viewer
     pkgs.vscode-extensions.github.vscode-pull-request-github
     hbenl.vscode-test-explorer
@@ -90,7 +89,7 @@
     pkgs.vscode-extensions.ms-vscode-remote.remote-ssh-edit
     pkgs.vscode-extensions.ms-vscode.hexeditor
     ms-vscode.remote-explorer
-    ms-vscode.remote-repositories
+    # ms-vscode.remote-repositories
     ms-vscode.test-adapter-converter
     ms-vsliveshare.vsliveshare
     redhat.vscode-xml
