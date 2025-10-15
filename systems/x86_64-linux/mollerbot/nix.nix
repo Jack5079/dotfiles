@@ -22,7 +22,7 @@
       options = "--delete-older-than 7d";
     };
     channel.enable = false;
-    package = pkgs.nixVersions.latest; # LAZY TREES LAZY TREES LAZY TREES
+    package = pkgs.lix;
     registry.nixpkgs.flake = inputs.nixpkgs;
     nixPath = [ "nixpkgs=flake:nixpkgs" ];
   };
